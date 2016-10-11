@@ -1,0 +1,133 @@
+/*footer顶部*/
+#footer{
+	width: 100%;
+	height: 100%;
+}
+.footer-top{
+	height: 106px;
+	width: 100%;
+	background-color: rgb(255,92,0);
+}
+.footer-top-content{
+	width: 1180px;
+	height: 106;
+}
+.footer-content01{
+	height: 62px;
+	width: 1180px;
+}
+.footer-content01 li{
+	position: relative;
+	margin-top: 30px;
+	float: left;
+	height: 30px;
+	width: 285px;
+}
+.footer-content01 li a{
+	color: #FFFFFF;
+	position: absolute;
+	font-size: 23px;
+	left: 46px;
+}
+.footer-sprite{
+	cursor: pointer;
+	width: 33px;
+	height: 33px;
+	display: inline-block;
+}
+.footer-content01 .sprite-icon01{
+	background: url(../../img/footer/sprite215new.png) no-repeat -140px 0px;
+}
+.footer-content01 .sprite-icon02{
+	background: url(../../img/footer/sprite215new.png) no-repeat -145px -40px;
+}
+.footer-content01 .sprite-icon03{
+	background: url(../../img/footer/sprite215new.png) no-repeat -140px -80px;
+}
+.footer-content01 .sprite-icon04{
+	background: url(../../img/footer/sprite215new.png) no-repeat -140px -120px;
+}
+.footer-content02{
+	height: 44px;
+	widows: 1089px;
+}
+.footer-content02 li{
+	float: left;
+	width: 170px;
+	margin-left:115px ;
+	color: #fff;
+	font-weight: bold;
+}
+
+/*footer中部*/
+.footer-mid{
+	width: 100%;
+	height: 170px;
+}
+.footer-mid .footer-middle{
+	width: 1180px;
+	height: 170px;
+	position: relative;
+}
+.footer-middle ul{
+	float: left;
+	width: 164px;
+	height: 170px;
+}
+.footer-middle ul li{
+	margin-top: 14px;
+
+}
+.footer-middle ul li a{
+	color: #aaa;
+	font-size: 11px;
+	margin-left: 30px;
+}
+.footer-middle ul .footer-mid-title{
+	color: #000000;
+	position: relative;
+	width: 164px;
+	height: 26px;
+}
+.footer-mid-title .footer-mid-icon01{
+	position: absolute;
+	width: 26px;
+	height: 26px;
+	left: 0px;
+	background: url(../../img/footer/sprite215new.png) no-repeat -90px 0px;
+}
+.footer-mid-title span{
+	position: absolute;
+	left: 31px;
+	top: 10px;
+}
+.footer-mid-weixin{
+	width: 110px;
+	height: 126px;
+	position: absolute;
+	right: 16px;
+	bottom: 23px;
+}
+.footer-mid-weixin01{
+	width: 110px;
+	height: 110px;
+}
+.footer-mid-weixin02{
+	width: 110px;
+	height: 16px;
+}
+.footer-mid-weixin02 img,.footer-mid-weixin02 span{
+	float: left;
+}
+.footer-mid-weixin02 img{
+	margin-left: 4px;
+	margin-top: 3px;
+}
+.footer-mid-weixin02 span{
+	margin-left: 7px;
+	display: block;
+	line-height: 18px;
+	width: 75px;
+}
+
+

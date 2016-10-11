@@ -1,0 +1,115 @@
+#search{
+	width: 100%;
+	height: 116px;
+	background-color: rgb(233,233,233);
+	border-bottom: 1px solid #ccc;
+}
+.mysearch{
+	width: 1089px;
+	height: 116px;
+	position: relative;
+}
+.search_right{
+	cursor: pointer;
+	position: absolute;
+	left: 0;
+	top: 30px;
+}
+.search_mid{
+	position: absolute;
+	width: 288px;
+	height: 116px;
+	left: 250px;
+	cursor: pointer;
+}
+.search_mid dl{
+	float: left;
+	width: 96px;
+	height: 116px;
+}
+.s_mid_01 dt{
+	width: 40px;
+	height: 40px;
+	/*background: url(../../img/common/search/top_bar2.png) no-repeat -86px -103px;*/
+}
+.s_mid_02 dt{
+	width: 40px;
+	height: 40px;
+	/*background: url(../../img/common/search/top_bar2.png) no-repeat -43px -103px;*/
+}
+.s_mid_03 dt{
+	width: 40px;
+	height: 40px;
+	/*background: url(../../img/common/search/top_bar2.png) no-repeat 0px -103px;*/
+}
+.search_mid dl dt{
+	margin-left: 29px;
+	margin-top: 26px;
+}
+.search_mid dd{
+	margin-top: 8px;
+	text-align: center;
+	color: rgb(112,112,112);
+}
+
+.search{
+	position: absolute;
+	right: 0px;
+	top: 30px;
+	width: 494px;
+	height: 40px;
+}
+.search .search_left,.search .search_btn{
+	float: left;
+}
+.search .search_left{
+	margin-left: 0px;
+	width: 428px;
+	height: 36px;
+	background-color: #fff;
+	border: 2px solid rgb(255,92,0);
+}
+.search .search_left input{
+	width: 420px;
+	height: 36px;
+	border: none;
+	outline: none;
+	margin-left: 8px;
+}
+.search .search_btn{
+	cursor: pointer;
+	margin-left: 432px;
+	height: 40px;
+	width: 60px;
+	margin-top: -40px;
+	background-color: rgb(255,92,0);
+}
+.search .search_click{
+	width: 24px;
+	height: 24px;
+	/*background: url(../../img/common/search/newIndexIcon.png) no-repeat -1px -84px;*/
+	margin-left: 15px;
+	margin-top: 10px;
+}
+
+.search_hot{
+	position: absolute;
+	top: 78px;
+	right: 0px;
+	width: 494px;
+	height: 20px;
+}
+.search_hot li{
+	float: left;
+	color: rgb(112,112,112);
+}
+.search_hot li a{
+	margin-right: 12px;
+	color: rgb(112,112,112);
+}
+.search_hot li a.search_hot01{
+	color: rgb(255,92,0);
+}
+.search_hot li a:hover{
+	color: rgb(255,92,0);
+}

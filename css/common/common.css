@@ -1,0 +1,28 @@
+body{font-family:"微软雅黑";
+	font-size:12px;
+	margin: 0 auto;
+	padding:0;
+	border:none;
+}
+html,div,p,span,form,legend,fieldset,h1,h2,h3,h4,h5,h6,hr,ul,li,ol,dl,dd,dt,br{
+	margin:0;padding:0;
+	border:none;
+}
+button,img,a,input,textarea,th,td,table,label{
+	margin:0;padding:0;
+}
+a{text-decoration:none;color:#000}
+ul,li,ol{list-style:none}
+img{border:none}
+.clear{/*height:0;overflow:hidden;font-size:0;*/clear:both}
+/*body,html{height:100%}*/
+div{margin: 0 auto;}
+
+/*不被选中*/
+.unSelect {
+	-webkit-user-select: none; /*//-webkit-对应 Safari and Chrome*/
+	-moz-user-select: none; /*//-moz-对应 Firefox*/
+	-ms-user-select: none; /*//-ms- for Internet Explorer*/
+	-o-user-select: none; /*//-o- for Opera*/
+	user-select: none;
+}
