@@ -72,7 +72,7 @@
 	color: rgb(255,92,0);
 }
 
-/**/
+/*登录login*/
 #mylogin{
 	width: 100%;
 	height: 470px;
@@ -83,4 +83,11 @@
 	height: 430px;
 	background-color: #FFFFFF;
 	border: 1px solid rgb(211,211,211);
+}
+.login-left{
+	width: 400px;
+	height: 300px;
+	background-color: red;
+	margin-left: 76px;
+	margin-top: 54px;
 }
