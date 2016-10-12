@@ -39,7 +39,61 @@
 				<div class="login-left">
 					<img src="../img/login/login01.jpg" />
 				</div>
-				<div class="login-right"></div>
+				<!--登录所有表单验证-->
+				<div class="login-right">
+					<!--账户名-->
+					<div class="login-name">
+						<!--登录表单项-->
+						<div class="login-box login-box-name">
+							<label for="userName">账户名:</label>
+							<input type="text" id="userName" placeholder="请填入邮箱或手机号码" />
+							<i>账户格式不正确!<!----></i>
+						</div>					
+					</div>
+					<!--密码-->
+					<div class="login-name">
+						<!--密码表单项-->
+						<div class="login-box login-box-name login-box-pwd">
+							<label for="pwd">密码:</label>
+							<input maxlength="20" type="text" id="pwd" placeholder="请填入密码" />
+							<i>密码长度为6-20位字符<!----></i>
+						</div>					
+					</div>
+					<!--验证码-->
+					<div class="login-name">
+						<!--验证码表单项-->
+						<div class="login-box login-box-name login-box-mobile">
+							<label for="mobile">验证码:</label>
+							<input type="text" id="mobile"/>
+							<div class="login-auth-code"> 
+								<div class="auth-code"></div>
+								<span>看不清?</span>
+								<a href="###">换一张</a>
+							</div>
+							<i id="auth-code-i">图片验证码格式错误<!----></i>
+						</div>					
+					</div>
+					<!--点击30天内自动登录-->
+					<div class="login-name" id="login-btn">
+						<!--自动登录选择项-->
+						<div class="login-box login-box-name login-box-ck">
+							<input maxlength="20" type="checkbox" id="ck"/>
+							<span>记住我(30天内免登录)<a href="##">忘记密码?</a></span>
+						</div>					
+					</div>
+					<!--登录按钮-->
+					<button id="btn">立即登录</button>
+					
+					<!--合作账号-->
+					<div class="cooperate-web">
+						<div class="cooperate-web-title">使用合作网站账号登录母婴之家：</div>
+						<div class="cooperate-web-link">
+							<a class="cooperate-link-weibo" href="###"></a>
+							<a class="cooperate-link-zhifubao" href="###"></a>
+							<a class="cooperate-link-qq" href="###"></a>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 		
