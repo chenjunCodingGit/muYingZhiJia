@@ -26,6 +26,7 @@
 	background: url(../../img/common/search/top_bar2.png) no-repeat -110px -65px;
 }
 
+/*首页导航*/
 .nav-list{
 	position: absolute;
 	width: 500px;
@@ -45,6 +46,14 @@
 	line-height: 35px;
 	color: #333;
 }
+/*直邮专区*/
+.nav-list .nav-europe{
+	display: none;
+}
+.nav-list .nav-europe:hover{
+	color: rgb(255,92,0);	
+}
+
 
 .nav-alert{
 	position: absolute;
