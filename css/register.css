@@ -1,0 +1,250 @@
+/*空白搜索栏*/
+#nav-blank{
+	width: 100%;
+	height: 106px;
+	border-bottom: 1px solid rgba(233,233,233);
+}
+.nav-blank{
+	width: 1089px;
+	position: relative;
+}
+.nav-blank img{
+	position: absolute;
+	left: 0px;
+	top: 20px;
+}
+
+/*登录注册show*/
+#login-show{
+	width: 100%;
+	height: 55px;
+	background-color: rgb(236,236,236);
+	display: inline-block;/*出现3像素的间隙*/
+	margin-bottom: -3px;/*解决3像素间隙*/
+	border-top: 1px solid rgb(211,211,211);
+}
+.login-show{
+	width: 494px;
+	height: 38px;
+	margin-top: 17px;
+}
+.login-show .login-show-register{
+	display: block;
+	float: left;
+	background-color: #FFFFFF;
+	width: 240px;
+	height: 36px;
+	border-right: 1px solid rgb(211,211,211);
+	border-top: 1px solid rgb(211,211,211);
+	border-left: 1px solid rgb(211,211,211);
+}
+.login-show .login-show-login{
+	margin-left: 9px;
+}
+.login-show .register-show-register{
+	border-top: 3px solid rgb(255,92,0);
+}
+.login-show-btn{
+	display: block;
+	line-height: 37px;
+}
+.login-show-register i,.login-show-register span{
+	float: left;
+}
+.login-show-register i{
+	display: block;
+	margin-left: 97px;
+	background: url(../img/login/register.png) no-repeat -192px -9px;
+	width: 16px;
+	height: 16px;
+	margin-top: 11px;
+}
+.login-show-register span{
+	margin-left: 6px;
+	font-weight: bold;
+	color: rgb(151,151,151);
+}
+.login-show .login-show-login{
+	height: 37px;
+}
+.login-show .login-show-login i{
+	background: url(../img/login/register.png) no-repeat -229px -9px;
+}
+.register-show-register span{
+	color: rgb(255,92,0);
+}
+
+/*注册register*/
+#register{
+	width: 100%;
+	height: 550px;
+	background-color: rgb(236,236,236);
+}
+.register{
+	width: 997px;
+	height: 550px;
+	background-color: #FFFFFF;
+	border: 1px solid rgb(211,211,211);
+}
+.register .register-left,.register .register-right{
+	float: left;
+	margin-top: 38px;
+	margin-left: 80px;
+}
+.register-right{
+	width: 345px;
+	height: 298px;
+	cursor: pointer;
+}
+/*注册表单验证*/
+.register .register-left{
+	width: 420px;
+	height: 488px;
+}
+/*包裹表单项和对应的提示信息*/
+.register-name{
+	width: 360px;
+	height: 37px;
+	padding-bottom: 30px;
+}
+.register-name div.register-phone{
+	margin-left: 24px;
+}
+/*注册名表单项*/
+.register .register-box{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	line-height: 37px;
+}.register-name .register-box input{
+	width: 266px;
+	height: 33px;
+	padding-left: 5px;
+	border: 1px solid #666;
+	margin-left: 12px;
+	outline: none;
+}
+.register-name .register-box label{
+	color: #666;
+}
+/*验证错误时样式*/
+.register .register-box-name input{
+	border: 1px solid #f00;
+	color: #f00;
+}
+.register-name .register-box-name i{
+	display: block;
+	width: 184px;
+	height: 24px;
+	line-height: 24px;
+	margin-top: 2px;
+	background:url(../img/login/onError.gif) no-repeat 3px center;
+	background-color: rgb(255,237,181);
+	border-radius: 4px;
+	border: 1px solid rgb(255,92,0);
+	color: #f00;
+	margin-left: 78px;
+	padding-left: 23px;
+	font-style: normal;
+	font-size: 14px;
+}
+.register-name div.register-phone i{
+	margin-left: 54px;
+}
+.register-name .register-box input.register-code{
+	width: 125px;
+	border: 1px solid #666;
+}
+.register-name .register-box i.register-auth-code{
+	width: 135px;
+}
+/*获取短信验证按钮*/
+.register-name .register-box a.register-phone-code{
+	display: block;
+	width: 113px;
+	height: 31px;
+	background: url(../img/login/register.png) no-repeat 0px 0px;
+	position: relative;
+	margin-top: -32px;
+	margin-left: 219px;
+}
+/*验证码*/
+.register-change-code{
+	position: relative;
+	width: 172px;
+	height: 37px;
+	margin-left: 190px;
+	margin-top: -37px;
+}
+.register-change-code div{
+	width: 80px;
+	height: 37px;
+	margin-left: 0px;
+	background-color: red;
+}
+.register-change-code span{
+	position: absolute;
+	left: 85px;
+	margin-top: -36px;
+}
+.register-change-code a{
+	position: absolute;
+	color: rgb(0,184,255);
+	left: 135px;
+	margin-top: -36px;
+}
+.register-name div.register-box .register-last-code{
+	width: 135px;
+}
+/*同意选项*/
+.register-name #registeryes{
+	width: 13px;
+	height: 13px;
+}
+.register-name div.register-box-last{
+	margin-left: 66px;
+}
+.register-name div.register-box-last i.register-last-i{
+	margin-left: 11px;
+	margin-top: -10px;
+	width: 150px;
+}
+
+/*注册按钮*/
+.register-btn{
+	cursor: pointer;
+	width: 227px;
+	height: 39px;
+	line-height: 39px;
+	text-align: center;
+	background-color:rgb(250,92,0) ;
+	color: #FFFFFF;
+	margin-left: 100px;
+	border: none;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+/*合作账号*/
+.cooperate-web{
+	width: 186px;
+	height: 55px;
+	margin-left: 100px;
+	margin-top: 10px;
+}
+.cooperate-web-link a{
+	float: left;
+	width: 24px;
+	height: 24px;
+	margin-right: 10px;
+	margin-top: 10px;
+}
+.cooperate-link-weibo{
+	background: url(../img/login/register.png) no-repeat -2px -301px;
+}
+.cooperate-link-qq{
+	background: url(../img/login/register.png) no-repeat -84px -301px;
+}
+.cooperate-link-zhifubao{
+	background: url(../img/login/register.png) no-repeat -28px -301px;
+}

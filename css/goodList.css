@@ -1,0 +1,25 @@
+#goodlist{
+	width: 100%;
+	background-color: rgb(233,233,233);
+}
+.goodlist{
+	width: 1089px;
+	overflow: hidden;
+}
+.goodlist .list-left,.goodlist .list-right{
+	float: left;
+	background-color: #FFFFFF;
+	border: 1px solid rgb(212,212,212);
+}
+/*goodList左侧导航*/
+.list-left{
+	width: 198px;
+	height: 100px;
+}
+
+/*goodList左侧商品列表*/
+.list-right{
+	width: 789px;
+	height: 100px;
+	margin-left: 10px;
+}

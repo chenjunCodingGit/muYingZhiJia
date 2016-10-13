@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>母婴之家-【注册】</title>
+		<link rel="stylesheet" href="../css/common/common.css" />
+		<link rel="stylesheet" href="../css/common/header.css" />
+		<link rel="stylesheet" href="../css/register.css" />
+		<link rel="stylesheet" href="../css/common/footer-bottom.css" />
+	</head>
+	<body>
+		<!--引入公共header-->
+		<div id="myheader"></div>
+		
+		<!--空白搜索栏-->
+		<div id="nav-blank">
+			<div class="nav-blank">
+				<img src="" /><!--已动态加载-->
+			</div>
+		</div>
+		
+		<!--登录注册show-->
+		<div id="login-show">
+			<div class="login-show">
+				<a href="###" class="login-show-register register-show-register">
+					<i></i>
+					<span class="login-show-btn">注册</span>
+				</a>
+				<a href="###"  class="login-show-register login-show-login">
+					<i></i>
+					<span class="login-show-btn">登录</span>
+				</a>
+			</div>
+		</div>
+		
+		<!--注册register-->
+		<div id="register">
+			<div class="register">
+				<!--注册时所有表单验证-->
+				<div class="register-left">
+					<!--手机号-->
+					<div class="register-name">
+						<!--手机号表单项-->
+						<div class="register-box register-box-name register-phone">
+							<label for="phone">手机号:</label>
+							<input type="text" id="phone" placeholder="请输入手机号" />
+							<i>手机格式不对，请重新输入!<!----></i>
+						</div>					
+					</div>
+					
+					<!--设置密码-->
+					<div class="register-name">
+						<!--设置密码表单项-->
+						<div class="register-box register-box-name">
+							<label for="registerPwd01">请设置密码:</label>
+							<input type="text" id="registerPwd01" placeholder="请填入密码" />
+							<i>密码长度限制为6-20位字符<!----></i>
+						</div>					
+					</div>
+					
+					<!--确认密码-->
+					<div class="register-name">
+						<!--确认密码表单项-->
+						<div class="register-box register-box-name">
+							<label for="registerPwd02">请确认密码:</label>
+							<input type="text" id="registerPwd02" placeholder="请再次填入密码" />
+							<i>2次密码不一致，请重新输入<!----></i>
+						</div>					
+					</div>
+					
+					<!--验证码-->
+					<div class="register-name">
+						<!--验证码表单项-->
+						<div class="register-box register-box-name register-phone">
+							<label for="registerCode">验证码:</label>
+							<input type="text" id="registerCode" class="register-code"/>
+							<div class="register-change-code">
+								<div id="register-btn-code"></div>
+								<span>看不清？</span>
+								<a href="###">换一张</a>
+							</div>
+							<i class="register-last-code">图片验证码格式错误<!----></i>
+						</div>					
+					</div>
+					
+					<!--短信验证码-->
+					<div class="register-name">
+						<!--短信表单项-->
+						<div class="register-box register-box-name">
+							<label for="registerPho">短信验证码:</label>
+							<input type="text" id="registerPho" class="register-code"/>
+							<a class="register-phone-code" href="###"></a>
+							<i class="register-last-code">短信验证码格式错误<!----></i>
+						</div>					
+					</div>
+					
+					<!--同意协议选项-->
+					<div class="register-name">
+						<!--同意协议表单项-->
+						<div class="register-box register-box-name register-box-last">
+							<input type="checkbox" id="registeryes"/>
+							<span>阅读并同意<a href="##">"母婴之家网站用户协议"</a></span>
+							<i class="register-last-i">您还没有同意用户协议<!----></i>
+						</div>	
+					</div>
+						
+					<!--提交注册按钮-->
+					<button id="register-btn" class="register-btn">提交注册</button>
+					
+					<!--合作账号-->
+					<div class="cooperate-web">
+						<div class="cooperate-web-title">使用合作网站账号登录母婴之家：</div>
+						<div class="cooperate-web-link">
+							<a class="cooperate-link-weibo" href="###"></a>
+							<a class="cooperate-link-zhifubao" href="###"></a>
+							<a class="cooperate-link-qq" href="###"></a>
+						</div>
+					</div>
+				</div>
+
+				<!--注册右边的广告-->
+				<div class="register-right">
+					<img src="../img/register/20160323111355_10_300x300.jpg" />
+				</div>
+			</div>
+		</div>
+		
+		<!--公用footer-bottom-->
+		<div id="footer-bottom"></div>
+	<script type="text/javascript" src="../lib/jquery-1.12.3.js" ></script>
+	<script type="text/javascript" src="../js/common/common.js" ></script>
+	<script>
+		loadHtml("../html/common/header.html","myheader");
+		loadHtml("../html/common/footer-bottom.html","footer-bottom");
+	</script>
+	
+	<script type="text/javascript" src="../js/common/header.js" ></script>
+	<script type="text/javascript" src="../js/register.js" ></script>
+	</body>
+</html>
