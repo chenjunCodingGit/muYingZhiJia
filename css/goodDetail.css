@@ -82,7 +82,7 @@
 	background: url(../img/goodDetail/icons_1_24.png) no-repeat 0px -157px;
 }
 .good-link-share016{
-	background: url(../img/goodDetail/icons_1_24.png) no-repeat 0px -208px;
+	background: url(../img/goodDetail/icons_1_24.png) no-repeat 0px -260px;
 }
 .good-link-share08{
 	width: 100px;
@@ -373,4 +373,420 @@
 	width: 100px;
 	height: 19px;
 	background: url(../img/goodDetail/detail-icon.png) no-repeat -97px -276px;
+}
+
+/*商品大图展示*/
+#good-detail-picture{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.good-detail-picture{
+	width: 1190px;
+	height: 100%;
+	overflow: hidden;
+}
+.good-detail-picture .good-picture-left,.good-detail-picture .good-picture-right{
+	float: left;
+}
+/*商品大图展示左边*/
+.good-picture-left{
+	width: 200px;
+	height: 100%;
+	overflow: hidden;
+}
+/*手机下单二维码*/
+.good-picture-code{
+	margin-top: 10px;
+	width: 198px;
+	height: 166px;
+	border: 1px solid #EEEEEE;
+}
+.good-picture-code img,.good-picture-code p{
+	width: 100px;
+	margin-left: 50px;
+}
+.good-picture-code img{
+	margin-top: 15px;
+}
+.good-picture-code p{
+	height: 19px;
+	line-height: 19px;
+	text-align: center;
+	color: #666666;
+}
+/*相关分类*/
+.good-picture-speices{
+	width: 198px;
+	height: 97px;
+	margin-top: 10px;
+	border: 1px solid #eee;
+}
+.good-picture-speicesTop{
+	width: 188px;
+	height: 28px;
+	line-height: 28px;
+	padding-left: 10px;
+	border-bottom: 1px solid #EEEEEE;
+	background-color: #DDDDDD;
+}
+.good-picture-speices a{
+	float: left;
+	display: inline-block;
+	width: 98px;
+	height: 34px;
+	line-height: 34px;
+	text-align: center;
+}
+/*其他同类品牌*/
+.good-picture-commonSpeices{
+	width: 198px;
+	height: 271px;
+	margin-top: 10px;
+	border: 1px solid #EEEEEE;
+}
+.good-picture-commonSpeices p{
+	width: 188px;
+	height: 28px;
+	line-height: 28px;
+	padding-left: 10px;
+	border-bottom: 1px solid #EEEEEE;
+	background-color: #DDDDDD;
+}
+.good-picture-commonSpeices a{
+	float: left;
+	display: inline-block;
+	width: 78px;
+	height: 22px;
+	line-height: 22px;
+	margin-left: 10px;
+}
+.good-commonSpeices-one{
+	padding-top: 13px;
+}
+/*最近浏览历史*/
+.good-picture-history{
+	width: 198px;
+	height: 100%;
+	margin-top: 10px;
+	border: 1px solid #EEEEEE;
+}
+.good-picture-history p{
+	width: 188px;
+	height: 28px;
+	line-height: 28px;
+	padding-left: 10px;
+	border-bottom: 1px solid #EEEEEE;
+	background-color: #DDDDDD;
+}
+/*所增加的动态dl公用的样式，自动填充高度*/
+.good-picture-history dl{
+	cursor: pointer;
+	width: 198px;
+	height: 163px;
+}
+.good-picture-history dl dt{
+	width: 100px;
+	height: 100px;
+	margin-left: 49px;
+}
+.good-picture-history dl dt img{
+	width: 100px;
+	height: 100px;
+}
+.good-picture-history dl dd{
+	width: 178px;
+	height: 63px;
+	margin-left: 10px;
+}
+.good-picture-history dl dd span{
+	display: block;
+	height: 22px;
+	line-height: 22px;
+}
+
+/*商品大图展示右边*/
+#good-picture-right{
+	width: 981px;
+	height: 100%;
+	min-height: 28px;
+	overflow: hidden;
+	/*margin-left: 5px;*/
+}
+/*吸顶效果样式*/
+#good-right-xiding{
+	width: 100%;
+	height: 30px;
+	background-color: rgb(250,250,250);
+	border-bottom: 1px solid #eee;
+	border-top: 2px solid #bbbbbb;
+	z-index: 999px;
+}
+#good-right-xiding a{
+	float: left;
+	width: 80px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center; 
+	
+}
+/*鼠标移上选项的效果*/
+#good-right-xiding a.good-xiding-active{
+	border-top: 2px solid #FF7700;
+	margin-top: -2px;
+	color: #FF7700;
+	font-weight:bold ;
+	border-bottom:1px solid #FFFFFF;
+	border-left: 1px solid #eee;
+	border-right: 1px solid #eee;
+}
+#good-right-xiding a:hover{
+	color: #FF7700;
+}
+#good-right-xiding #good-xiding-pinglunNum{
+	color:#FF7700 ;
+}
+.good-xiding-addbtn{
+	display: inline-block;
+	width: 93px;
+	height: 28px;
+	background: url(../img/goodDetail/detail-icon.png) no-repeat -0px -0px;
+	margin-left: 550px;
+}
+/*商品介绍*/
+.good-picture-introduce{
+	width: 979px;
+	height: 112px;
+	padding-top: 18px;
+	border-bottom: 1px solid #EEEEEE;
+	border-right: 1px solid #EEEEEE;
+	border-left: 1px solid #EEEEEE;
+}
+.good-picture-introduce span{
+	float: left;
+	display: inline-block;
+	width: 298px;
+	height: 31px;
+	line-height: 31px;
+	margin-left: 9px;
+	color: #666666;
+}
+/*该商品细节大图*/
+#good-bigPicture{
+	width: 981px;
+	/*height: 100%;*/
+	overflow: hidden;
+	z-index: 0px;
+}
+.good-bigPicture img{
+	width: 720px;
+	height: auto;
+	margin-left: 130px;
+/*	position: absolute;
+	left: 50%;
+	margin-left: -360px;*//*吸顶时，两个position重合后，此时z-index没有用，absolute/relative会覆盖吸顶的fixed*/
+}
+
+/*商品评价*/
+#good-detail-evaluate{
+	height: 195px;
+	width:981px;
+}
+#good-detail-evaluate p{
+	width: 960px;
+	height: 17px;
+	padding-top: 7px;
+	padding-left: 20px;
+	line-height: 24px;
+	font-size: 15px;
+	color: #000000;
+	border-top: 2px solid #FF7700;
+}
+#good-detail-evaluate .good-evaluate-percent,#good-detail-evaluate .good-evaluate-show{
+	float: left;
+}
+/*好评率百分比*/
+.good-evaluate-percent{
+	width: 100px;
+	height: 70px;
+	margin-left: 20px;
+	margin-top: 39px;
+}
+.good-evaluate-percent strong{
+	display: inline-block;
+	font: 400 40px/40px arial;
+	height: 40px;
+	color: #FF7700;
+}
+.good-evaluate-percent span{
+	position: relative;
+	right: 0px;
+	top: 0px;
+	color: #FF7700;
+}
+.good-evaluate-percent dd{
+	position: relative;
+	left: 7px;
+	top: 0px;
+	color: #AAAAAA;
+}
+/*好评率展示*/
+.good-evaluate-show{
+	width:200px;
+	height: 74px;
+	margin-top: 39px;
+
+}
+.good-evaluate-showList span,.good-evaluate-showList i,.good-evaluate-showList em{
+	display: inline-block;
+}
+/*展示评论条的百分比颜色*/
+.good-evaluate-showList i.good-evaluate-showActive{
+	width: 100px;
+	height: 11px;
+	background-color: #FF7700;
+}
+.good-evaluate-showList{
+	margin-bottom: 10px;
+}
+.good-evaluate-showList em{
+	width: 100px;
+	height: 11px;
+	line-height: 8px;
+	background-color: #efefef;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+/*所有评论*/
+.good-all-evaluate{
+	width: 981px;
+	height: 100%;
+	overflow: hidden;
+}
+/*显示好评差评中评精华*/
+.good-all-ul{
+	width: 981px;
+	height: 30px;
+	border-top: 2px solid #666;
+	border-bottom: 1px solid #EEEEEE;
+}
+.good-all-evaluate ul a{
+	float: left;
+	width: 72px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+}
+/*鼠标移上当前选项的效果*/
+.good-all-evaluate ul a.good-all-active{
+	border-top: 2px solid #FF7700;
+	margin-top: -2px;
+	color: #FF7700;
+	font-weight:bold ;
+	border-bottom:1px solid #FFFFFF;
+	border-left: 1px solid #eee;
+	border-right: 1px solid #eee;
+}
+/*显示具体评论*/
+.good-evaluate-com{
+	width: 981px;
+	height: 100%;
+	overflow: hidden;
+}
+.good-evaluate-one{
+	width: 830px;
+	height: 147px;
+	margin-left: 150px;
+	margin-top: 35px;
+	
+	border-left:1px solid #EEEEEE ;
+	border-bottom: 1px solid #EEEEEE;
+}
+.good-evaluate-one li{
+	margin-left: 38px;
+	margin-bottom: 20px;
+}
+/*评论人头像face*/
+.good-evaluate-face{
+	width: 36px;
+	height: 36px;
+	margin-left: -18px;
+	margin-top: 0px;
+}
+.good-evaluate-face img{
+	width: 36px;
+	height: 36px;
+}
+/*评论姓名日期*/
+.good-evaluate-name{
+	font-weight: bold;
+	color: #000000;
+}
+.good-evaluate-name i{
+	margin-left: 10px;
+	font-style: normal;
+}
+.good-evaluate-name em{
+	margin-left: 400px;
+	font-style: normal;
+	color: #CCCCCC;
+	font-weight: normal;
+	font-family: arial;
+}
+/*评分*/
+.good-evaluate-score span{
+	color: #CCCCCC;
+	margin-right: 10px;
+}
+.good-evaluate-score i.good-evaluate-star.s5{
+	display: inline-block;
+	width: 86px;
+	height: 20px;
+	line-height: 25px;
+	margin-bottom: -5px;
+	background: url(../img/goodDetail/detail-icon.png) no-repeat -0px -680px;
+}
+.good-evaluate-score em{
+	font-style: normal;
+	display: inline-block;
+	width: 100px;
+	height: 20px;
+	line-height: 20px;
+	margin-left: 10px;
+	background-color: #f5f5f5;
+	color: #AAAAAA;
+}
+/*内容*/
+.good-evaluate-content span{
+	color: #CCCCCC;
+	margin-right: 10px;
+}
+.good-evaluate-content i{
+	font-style: normal;
+	color: #666666;
+}
+/*品质保障*/
+.good-detail-bottom{
+	width: 981px;
+	height: 79px;
+	border-top: 2px solid #FF7700;
+	border-left: 1px solid #EEEEEE;
+	border-right: 1px solid #EEEEEE;
+	border-bottom: 1px solid #EEEEEE;
+}
+.good-detail-bottom01{
+	width: 961px;
+	height: 31px;
+	line-height: 31px;
+	padding-left: 20px;
+	font-size: 15px;
+	border-bottom: 1px solid #EEEEEE;
+	
+}
+.good-detail-bottom02{
+	width: 961px;
+	height: 47px;
+	line-height: 47px;
+	padding-left: 20px;
+	color: #AAAAAA;
 }
