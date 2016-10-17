@@ -20,3 +20,50 @@ $(".good-all-evaluate ul a").click(function(){
 	$(this).addClass("good-all-active").siblings().removeClass("good-all-active");
 	$('.good-all-evaluate ul a span').css('fontWeight','normal')
 })
+
+/*放大镜*/
+var oSmallImg = $(".small-img-box img");
+for(var i=0;i<oSmallImg.length;i++){
+	oSmallImg[i].index = i;
+	oSmallImg[i].onclick = function(){
+		for(var i=0;i<oSmallImg.length;i++){
+			oSmallImg[i].className = ""
+		}
+		this.className = "fangdajing-active";
+		//../img/goodDetail/152022_02_02.jpg
+		$(".middle-img").attr("src","../img/goodDetail/152022_02_0"+parseInt(this.index+1)+".jpg");
+		$(".big-img").attr("src","../img/goodDetail/152022_02_0"+parseInt(this.index+1)+".jpg");
+	}
+}
+var oMiddleImgBox = $(".middle-img-box");
+var oImagesZoom = $(".image-zoom");
+var oBigImgBox = $(".big-img-box");
+var oBigImg = $(".big-img");
+
+oMiddleImgBox.mousemove(function(e){
+	oImagesZoom.css("display","block");
+	oBigImgBox.css("display","block");
+	var l = e.pageX-oImagesZoom.width()/2-oMiddleImgBox.offset().left;
+	var t = e.pageY-oImagesZoom.height()/2-oMiddleImgBox.offset().top;
+	if(l<0){
+		l = 0;
+	}else if(l>oMiddleImgBox.width()-oImagesZoom.width()){
+		l=oMiddleImgBox.width()-oImagesZoom.width();
+	}
+	if(t<0){
+		t = 0;
+	}else if(t>oMiddleImgBox.height()-oImagesZoom.height()){
+		t=oMiddleImgBox.height()-oImagesZoom.height();
+	}
+	oImagesZoom.css("left",l+"px");
+	oImagesZoom.css("top",t+"px");
+	
+	var al = l*(oBigImg.width()/oMiddleImgBox.width());
+	var at = t*(oBigImg.height()/oMiddleImgBox.height());
+	oBigImg.css("left",-al + "px");
+	oBigImg.css("top",-at + "px");
+})
+oMiddleImgBox.mouseout(function(){
+	oImagesZoom.css("display","none");
+	oBigImgBox.css("display","none");
+})

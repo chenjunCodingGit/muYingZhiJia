@@ -61,7 +61,25 @@
 	background: url(../../img/common/search/top_bar2.png) no-repeat -114px -0px;
 }
 .nav02 .nav02-ui03{
-	background: url(../../img/common/search/top_bar2.png) no-repeat -114px -0px;
+	background: url(../../img/common/search/top_bar2.png) no-repeat -133px -20px;
+}
+.nav02 .nav02-ui04{
+	background: url(../../img/common/search/top_bar2.png) no-repeat -131px -0px;
+}
+.nav02 .nav02-ui05{
+	background: url(../../img/common/search/top_bar2.png) no-repeat -146px -4px;
+}
+.nav02 .nav02-ui06{
+	background: url(../../img/common/search/top_bar2.png) no-repeat -129px -21px;
+}
+.nav02 .nav02-ui07{
+	background: url(../../img/common/search/top_bar2.png) no-repeat -146px -22px;
+}
+.nav02 .nav02-ui08{
+	background: url(../../img/common/search/top_bar2.png) no-repeat -132px -41px;
+}
+.nav02 .nav02-ui09{
+	background: url(../../img/common/search/top_bar2.png) no-repeat -151px -41px;
 }
 /*二级导航箭头*/
 .nav02-cates-ui{
