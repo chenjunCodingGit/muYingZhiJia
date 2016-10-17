@@ -14,12 +14,14 @@
 
 /*轮播图*/
 #banner{
-	width: 100%;
+	margin: 0 auto;
+	width: 1089px;
 	height: 351px;
 	position: relative;
 	overflow: hidden;
 	background-color: rgb(233,233,233);
 }
+	/*banner顶部波浪样式*/
 #banner .banner-top{
 	position: absolute;
 	top: 0;
@@ -28,11 +30,10 @@
 	background: url(../img/index/banner/nav_bottom_bg.png) repeat-x left center;
 }
 #banner .box{
-	width: 1089px;
+	width: 10000px;
 	height: 351px;
 	position: absolute;
-	left: 50%;
-	margin-left: -545px;
+	top: 0px;
 }
 #banner .box li{
 	float: left;
@@ -59,6 +60,31 @@
 	border-radius: 7px;
 	background-color: #FFFFFF;
 	margin:2px 0px 2px 11px;
+}
+#banner .nav div.nav-active{
+	background-color: #FF7700;
+}
+#banner .prev,#banner .next{
+	width:50px; 
+	height:50px; 
+	line-height: 50px;
+	position:absolute; 
+	top: 50%;
+	margin-top: -25px;
+	background:black; 
+	cursor: pointer; 
+	font:50px/50px "宋体"; 
+	color:white; 
+	text-align: center; 
+	opacity: 0.4;
+}
+#banner .prev{
+	left: 10%;
+	margin-left: -2px;
+}
+#banner .next{
+	right: 10%;
+	margin-right: -2px;
 }
 
 /*倒计时*/

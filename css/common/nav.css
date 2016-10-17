@@ -1,12 +1,14 @@
 #nav{
 	width: 100%;
 	height: 35px;
+	background-color: #EEEEEE;
 }
 .mynav{
 	width: 1089px;
 	height: 35px;
 	position: relative;
 }
+/*一级导航*/
 #ui-nav{
 	position: absolute;
 	cursor: pointer;
@@ -15,7 +17,8 @@
 	line-height: 35px;
 	text-align: center;
 	color: rgb(255,92,0);
-	font-weight: bold;
+/*	font-weight: bold;*/
+	z-index: 999;
 }
 #ui-nav i{
 	position: absolute;
@@ -24,6 +27,86 @@
 	width: 9px;
 	height: 6px;
 	background: url(../../img/common/search/top_bar2.png) no-repeat -110px -65px;
+}
+/*二级导航*/
+.nav02-ul{
+	background-color:#FFFFFF ;
+	width: 142px;
+	height: 351px;
+	/*display: none;*//*是否显示二级导航*/
+	z-index: 999;
+}
+.nav02-ul li.nav02{
+	width:141px;
+	height: 37px;
+	line-height: 37px;
+	border: 1px solid #FFFFFF;
+	z-index: 999;
+	
+}
+/*二级导航图标*/
+.nav02-ui{
+	display: inline-block;
+	width: 12px;
+	height: 16px;
+	margin-bottom: -5px;
+	margin-left: 3px;
+	margin-right: 15px;
+	
+}
+.nav02 .nav02-ui01{
+	background: url(../../img/common/search/top_bar2.png) no-repeat -114px -0px;
+}
+.nav02 .nav02-ui02{
+	background: url(../../img/common/search/top_bar2.png) no-repeat -114px -0px;
+}
+.nav02 .nav02-ui03{
+	background: url(../../img/common/search/top_bar2.png) no-repeat -114px -0px;
+}
+/*二级导航箭头*/
+.nav02-cates-ui{
+	display: inline-block;
+	width: 6px;
+	height: 9px;
+	margin-left: 15px;
+	background: url(../../img/common/search/top_bar2.png) no-repeat -117px -84px;
+}
+
+/*三级导航*/
+.ui-nav03{
+	position: absolute;
+	left: 142px;
+	top: 35px;
+	width: 950px;
+	padding-bottom: 20px;
+	/*display: none;*//*是否显示三级导航*/
+	overflow: hidden;
+	background-color: rgb(250,250,245);
+	z-index: 1;
+}
+.ui-nav03 li.nav03{
+	width: 550px;
+	height: 55px;
+}
+.ui-nav03 span{
+	display: block;
+	width: 500px;
+	height: 23px;
+	text-align: left;
+	margin-left: 20px;
+	line-height: 23px;
+	font-weight: bold;
+	border-bottom: 1px dashed #EEEEEE;
+}
+.ui-nav03 .nav03 a.nav03-one{
+	margin-left: 20px;
+}
+.ui-nav03 .nav03 a{
+	float: left;
+	margin-top: 5px;
+	margin-left: 10px;
+	height: 13px;
+	line-height: 13px;
 }
 
 /*首页导航*/
@@ -60,7 +143,6 @@
 	width: 170px;
 	height: 35px;
 	line-height: 35px;
-	
 	right: 44px;
 }
 .nav-alert dt,.nav-alert dd{
