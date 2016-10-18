@@ -45,11 +45,65 @@
 }
 /*放大镜*/
 .fangdajing{
+	position: relative;
 	width: 349px;
 	height: 412px;
 	border-right: 1px solid #EEEEEE;
 	border-bottom: 1px solid #EEEEEE;
 }
+.fangdajing img{
+	vertical-align: bottom;
+}
+.big-img-box{
+	position: absolute;
+	top: 0px;
+	left: 400px;
+	display: none;/*是否显示大图*/
+	width: 350px;
+	height: 350px;
+	overflow: hidden;
+	z-index: 999px;
+}
+.big-img{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 700px;
+	height: 700px;
+	z-index: 999;
+}
+.middle-img{
+	width: 349px;
+	height: 350px;
+}
+.image-zoom{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	display: none;
+	width: 180px;
+	height: 180px;
+	background: url(../img/goodDetail/icon.png) repeat 0px 0px;
+}
+.small-img-box{
+	margin-top: 10px;
+	height: 64px;
+}
+.small-img-box li{
+	cursor: pointer;
+	float: left;
+	margin-right: 4px;
+}
+.small-img-box img{
+	width: 60px;
+	height: 60px;
+	border: 2px solid #FFFFFF;
+}
+.small-img-box .fangdajing-active{
+	border-color: #C81623;
+}
+
+
 /*分享链接*/
 .good-detail-link{
 	width: 339px;
