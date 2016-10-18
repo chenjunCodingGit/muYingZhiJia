@@ -35,26 +35,27 @@ $('.nav02-ul').mouseout(function(){
 $.get("../data/common/nav/nav-third.json",function(data){
 	var a = 1;
 	for(var i in data){
-		if(i == "nav0"+a){
-			var b = 1;
+		if(i == "nav01"){
+			var b = 1;var c = 1;
 			for(var j in data[i]){
 				if(j == "box0"+b){
-					var c = 1;
+					
 					for(var k in data[i][j]){
+						console.log(data[i][j][k])
+						
 						if(k == "text0"+c){
-							c++;
+							
 							for(var m in data[i][j][k]){
 								console.log(data[i][j][k][m])
-								/*var aCont = $('<a href="###"></a>').html(data[i][j][k][m]);*/
-								console.log(c)
+								var aCont = $('<a href="###"></a>').html(data[i][j][k][m]);
+								console.log(c);
+								$('.nav03').eq(c-1).append(aCont);
 								
-								/*$('.nav03').eq(c-1).append(aCont);*/
 							}
 						}
-						
 					}
 				}
-				b++;
+				b++;c++;
 			}
 		}
 		a++;
