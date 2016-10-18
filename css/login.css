@@ -126,11 +126,11 @@
 	color: #666;
 }
 /*账户名验证错误时样式*/
-.login-name .login-box-name input{
+.login-name .login-box-name input.login-error-input{
 	border: 1px solid #f00;
 	color: #f00;
 }
-.login-name .login-box-name i{
+.login-name .login-box-name i.login-error-i{
 	display: block;
 	width: 112px;
 	height: 24px;
@@ -151,7 +151,7 @@
 	margin-left: 12px;
 	margin-top: 4px;
 }
-.login-name div.login-box-pwd i{
+.login-name div.login-box-pwd i.login-pwd-error{
 	margin-left: 42px;
 	width: 148px;
 }
@@ -159,8 +159,9 @@
 .login-name div.login-box-mobile input{
 	width: 122px;
 }
-.login-name div.login-box-mobile i{
+.login-name div.login-box-mobile i.login-mobile-error{
 	width: 130px;
+	margin-left: -130px;
 }
 /*验证码内容*/
 .login-box-mobile{
@@ -181,7 +182,7 @@
 .auth-code{
 	width: 80px;
 	height: 34px;
-	border: 1px solid #aaa;
+	/*border: 1px solid #aaa;*/
 }
 .login-auth-code span,.login-auth-code a{
 	position: absolute;
@@ -259,4 +260,59 @@ div.login-name#login-btn{
 }
 .cooperate-link-zhifubao{
 	background: url(../img/login/register.png) no-repeat -28px -301px;
+}
+
+/* track base Css */
+
+#ehong-code-input{
+	width:42px;
+	letter-spacing:2px;
+	margin:0px 8px 0px 0px;
+}
+.ehong-idcode-val{
+	position:relative;
+	padding:1px 4px 1px 4px;
+	top:0px;
+	*top:-3px;
+	letter-spacing:4px;
+	display:inline;
+	cursor:pointer;
+	font-size:16px;
+	font-family:"Courier New", Courier, monospace;
+	text-decoration:none;
+	font-weight:bold;
+}
+.ehong-idcode-val0{
+	border:solid 1px #A4CDED;	
+	background-color:#ECFAFB;
+}
+
+.ehong-idcode-val1{
+	border:solid 1px #A4CDED;	
+	background-color:#FCEFCF;
+}
+.ehong-idcode-val2{
+	border:solid 1px #6C9;	
+	background-color:#D0F0DF;
+}
+.ehong-idcode-val3{
+	border:solid 1px #6C9;	
+	background-color:#DCDDD8;
+}
+.ehong-idcode-val4{
+	border:solid 1px #6C9;	
+	background-color:#F1DEFF;
+}
+.ehong-idcode-val5{
+	border:solid 1px #6C9;	
+	background-color:#ACE1F1;
+}
+.ehong-code-val-tip{
+	font-size:12px;
+	color:#1098EC;
+	top:0px;
+	*top:-3px;	
+	position:relative;	
+	margin:0px 0px 0px 4px;
+	cursor:pointer;	
 }

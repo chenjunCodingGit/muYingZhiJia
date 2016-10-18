@@ -26,7 +26,7 @@
 					<i></i>
 					<span class="login-show-btn">注册</span>
 				</a>
-				<a href="###"  class="login-show-register login-show-login">
+				<a href="../html/login.html" class="login-show-register login-show-login">
 					<i></i>
 					<span class="login-show-btn">登录</span>
 				</a>
@@ -42,9 +42,10 @@
 					<div class="register-name">
 						<!--手机号表单项-->
 						<div class="register-box register-box-name register-phone">
-							<label for="phone">手机号:</label>
-							<input type="text" id="phone" placeholder="请输入手机号" />
-							<i>手机格式不对，请重新输入!<!----></i>
+							<label for="phone">账户名:</label>
+							<input type="text" id="phone" placeholder="请输入手机号或邮箱" /><!--phone-->
+							<i><!--手机格式不对，请重新输入!--><!----></i>
+							<em></em>
 						</div>					
 					</div>
 					
@@ -53,8 +54,14 @@
 						<!--设置密码表单项-->
 						<div class="register-box register-box-name">
 							<label for="registerPwd01">请设置密码:</label>
-							<input type="text" id="registerPwd01" placeholder="请填入密码" />
-							<i>密码长度限制为6-20位字符<!----></i>
+							<input type="password" id="registerPwd01" placeholder="请填入密码" /><!--registerPwd01-->
+							<i><!--密码长度限制为6-20位字符--><!----></i>
+							<div class="pwd-style">
+								<span class="pwd-style01">弱</span>
+								<span>中</span>
+								<span>强</span>
+							</div>
+							<em></em>
 						</div>					
 					</div>
 					
@@ -63,8 +70,9 @@
 						<!--确认密码表单项-->
 						<div class="register-box register-box-name">
 							<label for="registerPwd02">请确认密码:</label>
-							<input type="text" id="registerPwd02" placeholder="请再次填入密码" />
-							<i>2次密码不一致，请重新输入<!----></i>
+							<input type="password" id="registerPwd02" placeholder="请再次填入密码" /><!--registerPwd02-->
+							<i><!--2次密码不一致，请重新输入--><!----></i>
+							<em></em>
 						</div>					
 					</div>
 					
@@ -73,13 +81,13 @@
 						<!--验证码表单项-->
 						<div class="register-box register-box-name register-phone">
 							<label for="registerCode">验证码:</label>
-							<input type="text" id="registerCode" class="register-code"/>
+							<input type="text" id="registerCode" class="register-code"/><!--registerCode-->
 							<div class="register-change-code">
-								<div id="register-btn-code"></div>
+								<div id="idcode"></div><!--验证码-->
 								<span>看不清？</span>
-								<a href="###">换一张</a>
+								<a href="###" id='code-change'>换一张</a>
 							</div>
-							<i class="register-last-code">图片验证码格式错误<!----></i>
+							<i class="register-last-code"><!--图片验证码格式错误--><!----></i>
 						</div>					
 					</div>
 					
@@ -90,7 +98,7 @@
 							<label for="registerPho">短信验证码:</label>
 							<input type="text" id="registerPho" class="register-code"/>
 							<a class="register-phone-code" href="###"></a>
-							<i class="register-last-code">短信验证码格式错误<!----></i>
+							<i class="register-last-code"><!--短信验证码格式错误--><!----></i>
 						</div>					
 					</div>
 					
@@ -98,14 +106,14 @@
 					<div class="register-name">
 						<!--同意协议表单项-->
 						<div class="register-box register-box-name register-box-last">
-							<input type="checkbox" id="registeryes"/>
+							<input type="checkbox" id="registeryes"/><!---->
 							<span>阅读并同意<a href="##">"母婴之家网站用户协议"</a></span>
-							<i class="register-last-i">您还没有同意用户协议<!----></i>
+							<i class="register-last-i"><!--您还没有同意用户协议--><!----></i>
 						</div>	
 					</div>
 						
 					<!--提交注册按钮-->
-					<button id="register-btn" class="register-btn">提交注册</button>
+					<button id="register-btn" class="register-btn">提交注册</button><!--提交-->
 					
 					<!--合作账号-->
 					<div class="cooperate-web">
@@ -129,6 +137,8 @@
 		<div id="footer-bottom"></div>
 	<script type="text/javascript" src="../lib/jquery-1.12.3.js" ></script>
 	<script type="text/javascript" src="../js/common/common.js" ></script>
+	<script type="text/javascript" src="../lib/jquery.idcode.js" ></script><!--引入验证码插件-->
+	<script type="text/javascript" src="../lib/jquery.cookie.js" ></script><!--引入cookie插件-->
 	<script>
 		loadHtml("../html/common/header.html","myheader");
 		loadHtml("../html/common/footer-bottom.html","footer-bottom");

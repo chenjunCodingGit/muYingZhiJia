@@ -22,7 +22,7 @@
 		<!--登录注册show-->
 		<div id="login-show">
 			<div class="login-show">
-				<a href="###" class="login-show-register">
+				<a href="../html/register.html" class="login-show-register">
 					<i></i>
 					<span class="login-show-btn">注册</span>
 				</a>
@@ -46,8 +46,8 @@
 						<!--登录表单项-->
 						<div class="login-box login-box-name">
 							<label for="userName">账户名:</label>
-							<input type="text" id="userName" placeholder="请填入邮箱或手机号码" />
-							<i>账户格式不正确!<!----></i>
+							<input type="text" id="userName" placeholder="请填入邮箱或手机号码" /><!---->
+							<i><!--账户格式不正确--><!----></i>
 						</div>					
 					</div>
 					<!--密码-->
@@ -55,8 +55,8 @@
 						<!--密码表单项-->
 						<div class="login-box login-box-name login-box-pwd">
 							<label for="pwd">密码:</label>
-							<input maxlength="20" type="text" id="pwd" placeholder="请填入密码" />
-							<i>密码长度为6-20位字符<!----></i>
+							<input maxlength="20" type="password" id="pwd" placeholder="请填入密码" /><!---->
+							<i><!--密码长度为6-20位字符--><!----></i>
 						</div>					
 					</div>
 					<!--验证码-->
@@ -66,11 +66,11 @@
 							<label for="mobile">验证码:</label>
 							<input type="text" id="mobile"/>
 							<div class="login-auth-code"> 
-								<div class="auth-code"></div>
+								<div class="auth-code" id="idcode"></div><!---->
 								<span>看不清?</span>
-								<a href="###">换一张</a>
+								<a href="###" id="code-change-login">换一张</a>
 							</div>
-							<i id="auth-code-i">图片验证码格式错误<!----></i>
+							<i id="auth-code-i"><!--图片验证码格式错误--><!----></i>
 						</div>					
 					</div>
 					<!--点击30天内自动登录-->
@@ -101,6 +101,8 @@
 		<div id="footer-bottom"></div>
 	<script type="text/javascript" src="../lib/jquery-1.12.3.js" ></script>
 	<script type="text/javascript" src="../js/common/common.js" ></script>
+	<script type="text/javascript" src="../lib/jquery.idcode.js" ></script><!--引入验证码插件-->
+	<script type="text/javascript" src="../lib/jquery.cookie.js" ></script><!--引入cookie插件-->
 	<script>
 		loadHtml("../html/common/header.html","myheader");
 		loadHtml("../html/common/footer-bottom.html","footer-bottom");

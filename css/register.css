@@ -127,12 +127,25 @@
 .register-name .register-box label{
 	color: #666;
 }
-/*验证错误时样式*/
-.register .register-box-name input{
-	border: 1px solid #f00;
-	color: #f00;
+/*验证正确样式*/
+.register .register-box-name em.right{
+	display: inline-block;
+	width:20px;
+	height: 20px;
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	background: url(../img/register/right.png) no-repeat center center;
 }
-.register-name .register-box-name i{
+.register .register-box-name em.register-phone-right{
+	right: 34px;
+}
+/*验证错误时样式*/
+.register .register-box-name input.error{
+	border: 1px solid #f00;
+	color: #FF0000;
+}
+.register-name .register-box-name i.error{
 	display: block;
 	width: 184px;
 	height: 24px;
@@ -148,7 +161,7 @@
 	font-style: normal;
 	font-size: 14px;
 }
-.register-name div.register-phone i{
+.register-name div.register-phone i.register-phone-error{
 	margin-left: 54px;
 }
 .register-name .register-box input.register-code{
@@ -158,6 +171,37 @@
 .register-name .register-box i.register-auth-code{
 	width: 135px;
 }
+/*密码强度*/
+.pwd-style{
+	position: absolute;
+	width: 190px;
+	height: 20px;
+	left: 78px;
+	top: 40px;
+	display: none;
+}
+.pwd-style span{
+	display: inline-block;
+	float: left;
+	width: 60px;
+	height: 20px;
+	line-height: 20px;
+	text-align: center;
+	background-color: #AAAAAA;
+	margin-right: 1px;
+	color: #FFFFFF;
+	
+}
+.pwd-style span.pwd-style01{
+	background-color: rgb(255,159,83);
+}
+.pwd-style span.pwd-style02{
+	background-color: #B6DC2F;
+}
+.pwd-style span.pwd-style03{
+	background-color: rgb(130,190,14);
+}
+
 /*获取短信验证按钮*/
 .register-name .register-box a.register-phone-code{
 	display: block;
@@ -180,7 +224,7 @@
 	width: 80px;
 	height: 37px;
 	margin-left: 0px;
-	background-color: red;
+	/*background-color: red;*/
 }
 .register-change-code span{
 	position: absolute;
@@ -248,3 +292,59 @@
 .cooperate-link-zhifubao{
 	background: url(../img/login/register.png) no-repeat -28px -301px;
 }
+
+/* track base Css */
+
+#ehong-code-input{
+	width:42px;
+	letter-spacing:2px;
+	margin:0px 8px 0px 0px;
+}
+.ehong-idcode-val{
+	position:relative;
+	padding:1px 4px 1px 4px;
+	top:0px;
+	*top:-3px;
+	letter-spacing:4px;
+	display:inline;
+	cursor:pointer;
+	font-size:16px;
+	font-family:"Courier New", Courier, monospace;
+	text-decoration:none;
+	font-weight:bold;
+}
+.ehong-idcode-val0{
+	border:solid 1px #A4CDED;	
+	background-color:#ECFAFB;
+}
+
+.ehong-idcode-val1{
+	border:solid 1px #A4CDED;	
+	background-color:#FCEFCF;
+}
+.ehong-idcode-val2{
+	border:solid 1px #6C9;	
+	background-color:#D0F0DF;
+}
+.ehong-idcode-val3{
+	border:solid 1px #6C9;	
+	background-color:#DCDDD8;
+}
+.ehong-idcode-val4{
+	border:solid 1px #6C9;	
+	background-color:#F1DEFF;
+}
+.ehong-idcode-val5{
+	border:solid 1px #6C9;	
+	background-color:#ACE1F1;
+}
+.ehong-code-val-tip{
+	font-size:12px;
+	color:#1098EC;
+	top:0px;
+	*top:-3px;	
+	position:relative;	
+	margin:0px 0px 0px 4px;
+	cursor:pointer;	
+}
+
