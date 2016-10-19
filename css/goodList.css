@@ -296,6 +296,9 @@
 	width: 197px;
 	height: 292px;
 }
+.goodlist-one i,.goodlist-one em{
+	font-style: normal;
+}
 .goodlist-active ul.goodlist-one{
 	float: left;
 }

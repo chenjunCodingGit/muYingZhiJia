@@ -22,7 +22,7 @@ $(".good-all-evaluate ul a").click(function(){
 })
 
 /*放大镜*/
-var oSmallImg = $(".small-img-box img");
+var oSmallImg = $(".small-img-box").find('img');
 //点击每个小图遍历
 for(var i=0;i<oSmallImg.length;i++){
 	oSmallImg[i].index = i;
@@ -35,8 +35,8 @@ for(var i=0;i<oSmallImg.length;i++){
 		this.className = "fangdajing-active";
 		//改变当前小图时，显示当前的中图和大图
 		//../img/goodDetail/152022_02_02.jpg
-		$(".middle-img").attr("src","../img/goodDetail/152022_02_0"+parseInt(this.index+1)+".jpg");
-		$(".big-img").attr("src","../img/goodDetail/152022_02_0"+parseInt(this.index+1)+".jpg");
+		$(".middle-img").attr("src","../img/goodDetail/1520220"+parseInt(this.index+1)+".jpg");
+		$(".big-img").attr("src","../img/goodDetail/1520220"+parseInt(this.index+1)+".jpg");
 	}
 }
 var oMiddleImgBox = $(".middle-img-box");
@@ -76,4 +76,42 @@ oMiddleImgBox.mousemove(function(e){
 oMiddleImgBox.mouseout(function(){
 	oImagesZoom.css("display","none");
 	oBigImgBox.css("display","none");
+})
+
+/*加入购物车信息*/
+//点击数量加减
+var goodNum = $('.good-car-num').html();
+$('.good-detail-add').click(function(){
+	goodNum++;
+	$('.good-car-num').html(goodNum);
+})
+$('.good-detail-sub').click(function(){
+	if(goodNum>0){
+		goodNum--;
+		$('.good-car-num').html(goodNum);
+	}else{
+		goodNum = 0;
+	}
+})
+//点击加入购物车
+$('.good-car-add').click(function(){
+	
+	var goodId = $(this)[0].id;
+	var goods = $.cookie('cars')? JSON.parse($.cookie('cars')) : {};
+	var goodName = $(this).attr('name');
+	var goodPrice = $('.good-detail-off').find('i').html();
+	var goodSrc = $('.goodcar-detail-img').attr('src');
+	if(goodId in goods){
+		goods[goodId].num += goodNum;
+	}else{
+		goods[goodId] = {
+			id:goodId,
+			src:goodSrc,
+			name:goodName,
+			price:goodPrice,
+			num:goodNum
+		}
+	}
+	$.cookie('cars',JSON.stringify(goods),{expires:7,path:"/"});
+	$('.good-car-num').html('1');
 })

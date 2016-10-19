@@ -1,0 +1,429 @@
+/*头部图片部分*/
+#shopcar-header{
+	height: 145px;
+	width: 100%;
+	background-color: #ececec;
+}
+.shopcar-header{
+	height: 145px;
+	width: 1000px;
+	position: relative;
+}
+/*图片布局*/
+.shopcar-header-top{
+	height: 113px;
+	width: 1000px;
+}
+.shopcar-header-top .shopcar-top-left,.shopcar-header-top .shopcar-top-right{
+	float: left;
+	position: absolute;
+}
+.shopcar-top-left{
+	width: 180px;
+	top: 20px;
+	left: 0px;
+	cursor: pointer;
+}
+.shopcar-top-right{
+	width: 610px;
+	top: 37px;
+	right: 0px;
+}
+.shopcar-header-bottom{
+	position: absolute;
+	height: 32px;
+	width: 1000px;
+	top: 92px;
+}
+
+/*购物车商品*/
+#shopcar{
+	overflow: hidden;
+	width: 100%;
+	background-color: #ECECEC;
+}
+.shopcar-box{
+	width: 1000px;
+	border: 1px solid #CCCCCC;
+}
+/*购物车标题 */
+.shopcar-top{
+	width: 1000px;
+	height: 45px;
+	border-bottom: 1px solid #ccc;
+	background-color:#ececec;
+}
+.shopcar-top span{
+	display: inline-block;
+	height: 45px;
+	line-height: 45px;
+}
+.shopcar-top-title{
+	font-weight: bold;
+	margin-left: 30px;
+	width: 120px;
+	font-size: 20px;
+}
+.shopcar-top-title01{
+	margin-left: 3px;
+	width: 120px;
+	color: #AAAAAA;
+}
+.shopcar-top-titles{
+	margin-right: 60px;
+}
+.shopcar-top-titles.shop-titles-one{
+	margin-left: 250px;	
+}
+
+/*购物车物品*/
+.shopcar{
+	overflow: hidden;
+	width: 1000px;
+	background-color: #FFFFFF;
+}
+.shopcar-one{
+	width: 1000px;
+	height: 100px;
+	position: relative;
+	background-color: #FFFFFF;
+	border-bottom: 1px solid #BBBBBB;
+}
+.shopcar-one i,.shopcar-one em{
+	font-style: normal;
+}
+.shopcar-one div,.shopcar-one span{
+	position: absolute;
+	display: block;
+}
+/*该商品的图片*/
+.shopcar-one-img{
+	cursor: pointer;
+	width: 75px;
+	height: 75px;
+	border: 1px solid #BBBBBB;
+	left: 40px;
+	top: 15px;
+}
+.shopcar-one-img img{
+	width: 75px;
+	height: 75px;
+}
+/*商品细节描述*/
+.shopcar-one-describe{
+	height: 100px;
+	line-height: 100px;
+	left: 125px;
+}
+/*商品价格1*/
+.shopcar-one-price{
+	height: 100px;
+	line-height: 100px;
+	left: 535px;
+}
+/*商品数量减减*/
+.shopcar-one-sub{
+	top: 38px;
+	width: 27px;
+	height: 25px;
+	line-height: 25px;
+	text-align: center;
+	left: 624px;
+	border: 1px solid #BBBBBB;
+	cursor: pointer;
+}
+/*显示目前商品数量*/
+.shopcar-one-num{
+	top: 38px;
+	width: 35px;
+	height: 25px;
+	line-height: 25px;
+	text-align: center;
+	left: 652px;
+	border-top: 1px solid #BBBBBB;
+	border-bottom: 1px solid #BBBBBB;
+}
+/*商品数量加加*/
+.shopcar-one-add{
+	top: 38px;
+	width: 27px;
+	line-height: 25px;
+	text-align: center;
+	height: 25px;
+	left: 687px;
+	border: 1px solid #BBBBBB;
+	cursor: pointer;
+}
+/*最终结算价格*/
+.shopcar-one-prices{
+	height: 100px;
+	line-height: 100px;
+	left: 778px;
+	color: #FF0000;
+}
+/*删除该商品*/
+.shopcar-one-del{
+	cursor: pointer;
+	height: 100px;
+	line-height: 100px;
+	right: 77px;
+}
+.shopcar-one-del:hover{
+	color: #FF0000;
+}
+
+/*购物车优惠*/
+.shopcar-bottom{
+	position: relative;
+	width: 1000px;
+	height: 40px;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	background-color:#ececec;
+}
+.shopcar-bottom p{
+	float: left;
+	height: 40px;
+	line-height: 40px;
+}
+/*已优惠*/
+.shopcar-bottom-p1{
+	position: absolute;
+	top: 0px;
+	left: 500px;
+}
+/*小计*/
+.shopcar-bottom-p2{
+	position: absolute;
+	left: 700px;
+	
+}
+.shopcar-bottom p span{
+	color: #FF0000;
+	display: inline-block;
+}
+.shopcar-bottom-span01{
+	margin-left: 5px;
+	margin-right: 5px;
+}
+.shopcar-bottom-span02{
+	margin-left: 50px;
+	font-weight: bolder;
+}
+.shopcar-total-pirce{
+	font-style: normal;
+}
+.shopcar-all-t{
+	font-style: normal;
+}
+/*确认购买*/
+#shopcar-buy{
+	width: 100%;
+	padding-bottom: 20px;
+	padding-top: 22px;
+	background-color:#ececec;
+}
+.shopcar-buy{
+	width: 1000px;
+	height: 115px;
+	border: 1px solid #BBBBBB;
+}
+/*优惠码输入框*/
+.shopcar-buy-top{
+	position: relative;
+	width: 1000px;
+	height: 57px;
+	background-color: #FFFFFF;
+}
+.shopcar-buy-top input,.shopcar-buy-top p,.shopcar-buy-top div{
+	float: left;
+}
+.shopcar-buy-top input{
+	position: absolute;
+	width: 240px;
+	height: 38px;
+	left: 55px;
+	top: 9px;
+	padding-left: 5px;
+	border: 1px solid #BBBBBB
+}
+/*点击使用按钮*/
+.shopcar-buy-use{
+	position: absolute;
+	cursor: pointer;
+	width: 80px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	background-color: #FF7700;
+	color: #FFFFFF;
+	top: 9px;
+	left: 256px;
+}
+/*显示优惠金额*/
+.shopcar-buy-top p{
+	position: absolute;
+	left: 680px;
+	height: 57px;
+	line-height: 57px;
+}
+.shopcar-buy-top p span{
+	display: inline-block;
+	margin-left: 50px;
+	color: #f00;
+	font-weight: bold;
+}
+/*点击确认订单*/
+.shopcar-buy-bottom{
+	position: relative;
+	width: 1000px;
+	height: 57px;
+	margin-bottom: 20px;
+	border-top: 1px solid #BBBBBB;
+	background-color: #ececec;
+}
+.shopcar-buy-bottom a,.shopcar-buy-bottom span{
+	display: inline-block;
+}
+/*清空购物车*/
+.shopcar-clear{
+	position: absolute;
+	left: 22px;
+	height: 57px;
+	line-height: 57px;
+	color: rgb(48,10,253);
+	text-decoration: underline;
+}
+/*共有商品数量*/
+.shopcar-goods-num{
+	position: absolute;
+	height: 57px;
+	line-height: 57px;
+	left: 500px;
+}
+/*操作共有商品数量*/
+.shopcar-goods-num span{
+	color: #FF0000;
+}
+/*商品总价*/
+.shopcar-total-money{
+	position: absolute;
+	height: 57px;
+	line-height: 57px;
+	left: 700px;
+	font-size: 27px;
+	color: #FF0000;
+}
+/*提交结算商品*/
+.shopcar-btn{
+	position: absolute;
+	right: 0px;
+	width: 145px;
+	height: 57px;
+	line-height: 57px;
+	text-align: center;
+	font-size: 22px;
+	/*font-weight: bold;*/
+	color: #FFFFFF;
+	background-color: #FF7700;
+}
+
+/*换购推荐*/
+#shopcar-change{
+	height: 177px;
+	width: 100%;
+	background-color:#ececec;
+}
+.shopcar-change{
+	height: 177px;
+	width: 1000px;
+	background-color:#FFFFFF;
+}
+/*换购标题*/
+.shopcar-change-top01{
+	width:1000px;
+	height: 30px;
+	background-color: #f5f5f5;
+}
+.shopcar-change-top{
+	width: 168px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	background-color: #FFFFFF;
+	margin-left: 0px;
+}
+.shopcar-change-goods{
+	width: 1000px;
+	height: 147px;
+}
+.shopcar-change-goods .shopcar-change-one{
+	float: left;
+}
+/*推荐一个*/
+.shopcar-change-one{
+	width: 276px;
+	margin-left: 32px;
+}
+/*换购*/
+.shopcar-change-title{
+	width: 276px;
+	margin-left: 0px;
+	margin-top: 20px;
+}
+.shopcar-change-title span{
+	display: inline-block;
+	margin-left: 28px;
+	width: 36px;
+	height: 19px;
+	line-height: 19px;
+	text-align: center;
+	background-color: #ef9900;
+	color: #FFFFFF;
+}
+.shopcar-change-detail{
+	width: 276px;
+	height: 127px;
+	margin-left: 20px;
+}
+/*换购推荐图片加文字描述*/
+.shopcar-change-detail dt,.shopcar-change-detail dd{
+	float: left;
+}
+.shopcar-change-detail dt{
+	margin-left: 7px;
+	margin-top: 10px;
+	width: 55px;
+	height: 55px;
+	border: 1px solid #BBBBBB;
+}
+.shopcar-change-detail dt img{
+	width: 55px;
+	height: 55px;
+}
+.shopcar-change-detail dd{
+	width: 209px;
+	height: 78px;
+	margin-top: 10px;
+}
+.shopcar-change-detail dd p{
+	margin-left: 10px;
+}
+.shopcar-change-p1:hover{
+	color: #FF0000;
+	cursor: pointer;
+}
+.shopcar-change-p2{
+	color: #FF0000;
+}
+.shopcar-change-p3{
+	cursor: pointer;
+	width: 62px;
+	height: 24px;
+	line-height: 24px;
+	margin-top: 8px;
+	text-align: center;
+	border-radius: 3px;
+	background-color: #ef9900 ;
+	color: #FFFFFF;
+}

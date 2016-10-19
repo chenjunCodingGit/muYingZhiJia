@@ -40,17 +40,17 @@
 					<div class="fangdajing">
 						<!--放大镜展示中盒子-->
 						<div class="middle-img-box">
-							<img src="../img/goodDetail/152022_01_01.jpg" alt="" class="middle-img" />
+							<img src="../img/goodDetail/15202201.jpg" alt="" class="middle-img" />
 							<div class="image-zoom"></div>
 						</div>
 						<!--放大镜放大的展示-->
 						<div class="big-img-box">
-							<img src="../img/goodDetail/152022_01_01.jpg" class="big-img"/>
+							<img src="../img/goodDetail/15202201.jpg" class="big-img"/>
 						</div>
 						<ul class="small-img-box">
-							<li><a href="###"></a><img class="fangdajing-active" src="../img/goodDetail/152022_01_01.jpg" alt="" /></li>
-							<li><a href="###"></a><img src="../img/goodDetail/152022_02_02.jpg" alt="" /></li>
-							<li><a href="###"></a><img src="../img/goodDetail/152022_02_03.jpg" alt="" /></li>
+							<li><a href="###"></a><img class="fangdajing-active goodcar-detail-img" src="../img/goodDetail/15202201.jpg" alt="" /></li>
+							<li><a href="###"></a><img src="../img/goodDetail/15202202.jpg" alt="" /></li>
+							<li><a href="###"></a><img src="../img/goodDetail/15202203.jpg" alt="" /></li>
 						</ul>
 					</div>
 					<!--分享链接-->
@@ -73,7 +73,7 @@
 						<li class="good-detail-proTitle">天天特价10/14</li>
 						<li class="good-detail-proTitle">限时促销</li>
 						<li class="good-detail-send"><span></span> <i>母婴之家发货</i> </li>
-						<li class="good-detail-off"><span> 促销价</span><i>￥1330.00</i></li>
+						<li class="good-detail-off"><span> 促销价</span><i>1330</i><em>.00</em></li>
 						<li class="good-detail-change">
 							<span class="good-detail-span01">促销信息</span>
 							<span class="good-detail-span02">换购</span>
@@ -89,14 +89,14 @@
 					<!--加入购物车-->
 					<div class="good-car">
 						<!--显示加入购物车的数量-->
-						<a href="###" class="good-car-num">1</a>
+						<a href="###" class="good-car-num">0</a><!--记录商品数量-->
 						<a href="###" class="good-car-btn">
 							<!--点击商品数量+-1-->
 							<span class="good-detail-add"></span>
 							<span class="good-detail-sub"></span>
 						</a>
 						<!--点击加入购物车-->
-						<a href="###" class="good-car-add"></a>
+						<a href="###" id="goodId01" class="good-car-add" name="奇蒂kiddy儿童汽车安全座椅"></a>
 						<a href="###" class="good-client-buy"><img src="../img/goodDetail/phonebuy.jpg" /> </a>		
 					</div>
 				</div>
@@ -329,6 +329,7 @@
 		<div id="footer-bottom"></div>
 	<script type="text/javascript" src="../lib/jquery-1.12.3.js" ></script>
 	<script type="text/javascript" src="../js/common/common.js" ></script>
+	<script type="text/javascript" src="../lib/jquery.cookie.js" ></script><!--引入cookie插件-->
 	<script>
 		loadHtml("../html/common/header.html","myheader");
 		loadHtml("../html/common/search.html","search");

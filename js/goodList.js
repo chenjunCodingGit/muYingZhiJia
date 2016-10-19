@@ -21,3 +21,24 @@ $('.list-click-tab').each(function(){
 		$('.goodlist0'+$(this).html()).css("display","block").siblings().css("display","none")
 	})
 })
+
+/*点击添加到购物车*/
+$('.goodlist-one').click(function(){
+	var goodId = $(this)[0].id;
+	var goods = $.cookie('cars')? JSON.parse($.cookie('cars')) : {};
+	var goodName = $(this).find('p2').html();
+	var goodPrice = $(this).find('p4').find('i').html();
+	var goodSrc = $(this).find('img').attr('src');
+	if(goodId in goods){
+		goods[goodId].num++;
+	}else{
+		goods[goodId] = {
+			id:goodId,
+			src:goodSrc,
+			name:goodName,
+			price:goodPrice,
+			num:1
+		}
+	}
+	$.cookie('cars',JSON.stringify(goods),{expires:7,path:"/"});
+})
