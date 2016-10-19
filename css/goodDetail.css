@@ -212,6 +212,10 @@
 	color: #AAAAAA;
 		letter-spacing: .5em;
 }
+.good-detail-off em{
+	font-style: normal;
+	color: #FF0000;
+}
 .good-detail-off i{
 	font-style: normal;
 	color: #f00;

@@ -1,0 +1,310 @@
+/*顶部图片*/
+#pay-top{
+	width: 100%;
+	height: 103px;
+	background-color: #ECECEC;
+}
+.pay-top{
+	width: 1000px;
+	height: 103px;
+	position: relative;
+}
+/**/
+.pay-top01{
+	position: absolute;
+	left: 0px;
+	top: 20px;
+	cursor: pointer;
+}
+.pay-top02{
+	position: absolute;
+	right: 0px;
+	top: 34px;
+}
+/**/
+#pay-address{
+	height: 305px;
+	width: 100%;
+	background-color: #ECECEC;
+	padding-bottom: 20px;
+}
+.pay-address{
+	height: 305px;
+	width: 1000px;
+	border: 1px solid #BBBBBB;
+	background-color: #FFFFFF;
+}
+.pay-address-top{
+	font-size: 14px;
+	font-weight: 700;
+	width: 990px;
+	height: 45px;
+	line-height: 45px;
+	padding-left: 10px;
+	border-bottom: 1px solid #BBBBBB;
+}
+/**/
+.pad-address-tab{
+	width: 1000px;
+	height: 38px;
+	position: relative;
+}
+.pad-address-tab li{
+	position: absolute;
+}
+.pad-address-tab span{
+	color: #FF7700;
+}
+.pay-name{
+	left: 40px;
+	top: 20px;
+}
+.pay-name input{
+	width: 145px;
+	height: 24px;
+}
+.pay-address-zone{
+	left: 27px;
+	top: 60px;
+}
+.pay-address-zone select{
+	width: 70px;
+}
+.pay-address-detail{
+	left: 39px;
+	top: 100px;
+}
+.pay-address-detail input{
+	width: 315px;
+	height: 24px;
+}
+.pay-phone{
+	left: 26px;
+	top: 140px;
+}
+.pay-phone input{
+	width: 145px;
+	height: 24px;
+}
+.pay-home-phone{
+	left: 31px;
+	top: 180px;
+}
+.pay-home-phone01{
+	width: 75px;
+	height: 24px;
+}
+.pay-home-phone02{
+	width: 135px;
+	height: 24px;
+}
+.pay-save-info{
+	cursor: pointer;
+	position: absolute;
+	top: 215px;
+	left: 100px;
+	background-color: rgb(226,56,59);
+	color: #FFFFFF;
+	width: 126px;
+	height: 31px;
+	line-height: 31px;
+	text-align: center;
+	border-radius: 3px;
+}
+.pay-cancel-info{
+	cursor: pointer;
+	position: absolute;
+	width: 66px;
+	height: 31px;
+	line-height: 31px;
+	text-align: center;
+	border: 1px solid #BBBBBB;
+	border-radius: 3px;
+	color: #666666;
+	top: 215px;
+	left: 250px;
+}
+/*商品信息*/
+#pay-info{
+	width: 100%;
+	overflow: hidden;
+	padding-bottom: 20px;
+	background-color: #ECECEC;
+}
+.pay-info{
+	width: 1000px;
+	overflow: hidden;
+	border: 1px solid #BBBBBB;
+	background-color: #FFFFFF;
+}
+.pay-info-top{
+	height: 45px;
+	line-height: 45px;
+	width: 967px;
+	border-left: 3px solid #FF7700;
+	padding-left: 30px;
+}
+.pay-info-top span{
+	display: inline-block;
+}
+.pay-info-two{
+	margin-right: 44px;
+	margin-left: 37px;
+}
+.pay-info-t{
+	margin-left: 500px;
+}
+
+/*购物车物品*/
+.shopcar{
+	overflow: hidden;
+	width: 1000px;
+	border-right: 1px solid #BBBBBB;
+	border-left: 1px solid #BBBBBB;
+	background-color: #FFFFFF;
+}
+.shopcar-one{
+	width: 1000px;
+	height: 100px;
+	position: relative;
+	border-bottom: 1px solid #BBBBBB;
+}
+.shopcar-one i,.shopcar-oneem{
+	font-style: normal;
+	margin-right: 2px;
+}
+.shopcar-one div,.shopcar-one span{
+	position: absolute;
+	display: block;
+}
+/*该商品的图片*/
+.shopcar-one-img{
+	cursor: pointer;
+	width: 75px;
+	height: 75px;
+	border: 1px solid #BBBBBB;
+	left: 40px;
+	top: 15px;
+}
+.shopcar-one-img img{
+	width: 75px;
+	height: 75px;
+}
+/*商品细节描述*/
+.shopcar-one-describe{
+	height: 100px;
+	line-height: 100px;
+	left: 125px;
+}
+/*商品价格1*/
+.shopcar-one-price{
+	height: 100px;
+	line-height: 100px;
+	left: 582px;
+}
+/*显示目前商品数量*/
+.shopcar-one-num{
+	top: 38px;
+	width: 35px;
+	height: 25px;
+	line-height: 25px;
+	text-align: center;
+	left: 740px;
+}
+/*最终结算价格*/
+.shopcar-one-prices{
+	height: 100px;
+	line-height: 100px;
+	left: 880px;
+	color: #FF0000;
+}
+
+.pay-num{
+	height: 111px;
+	width: 1000px;
+	position: relative;
+	border-bottom: 1px solid #BBBBBB;
+	border-right: 1px solid #BBBBBB;
+	border-left: 1px solid #BBBBBB;
+	background-color: #FFFFFF;
+}
+.pay-num ul{
+	position: relative;
+	width: 183px;
+	height: 111px;
+	margin-left: 800px;
+}
+.pay-num li{
+	width: 1000px;
+	height: 25px;
+	line-height: 25px;
+}
+.pay-num li span.pay-num-num{
+	position: absolute;
+	right: 0px;
+}
+.pay-num-trans{
+	position: absolute;
+	left: 24px;
+}
+.pay-num-last{
+	color: #FF0000;
+}
+/*订单结算*/
+#pay-bill{
+	width: 100%;
+	height: 200px;
+	background-color: #ECECEC;
+}
+.pay-bill{
+	width: 1000px;
+	height: 200px;
+	position: relative;
+	background-color: #FFFFFF;
+	border: 1px solid #BBBBBB;
+}
+.pay-bill-over{
+	height: 40px;
+	line-height: 40px;
+	width: 980px;
+	padding-left: 20px;
+	font-size: 15px;
+	font-weight: 700;
+	border-bottom: 1px solid #BBBBBB;
+}
+.pay-bill-btn{
+	width: 1000px;
+	height: 160px;
+}
+.pay-bill-btn ul{
+	float: right;
+	height: 160px;
+	width: 243px;
+	position: relative;
+}
+.pay-bill-btn ul li{
+	height: 25px;
+	line-height: 25px;
+}
+.pay-bill-num{
+	position: absolute;
+	right: 10px;
+}
+.pay-bill-e{
+	position: absolute;
+	left: 48px;
+}
+.pay-bill-ok{
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	width: 100px;
+	cursor: pointer;
+	background-color: #FF7700;
+	color: #FFFFFF;
+	position: absolute;
+	border-radius: 3px;
+	right: 30px;
+	bottom: 30px;
+	font-size: 17px;
+}
