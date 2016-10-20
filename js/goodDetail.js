@@ -121,7 +121,7 @@ $('.good-car-add').click(function(){
 	var goodSrc = $('.goodcar-detail-img').attr('src');
 	if(goodId in goods){
 		goods[goodId].num = goodNum + goods[goodId].num;
-		console.log(typeof(goods[goodId].num))
+		//console.log(typeof(goods[goodId].num))
 	}else{
 		goods[goodId] = {
 			id:goodId,
@@ -133,8 +133,20 @@ $('.good-car-add').click(function(){
 	}
 	$.cookie('cars',JSON.stringify(goods),{expires:7,path:"/"});
 	
+	
+	/*得到购物车里所有数量,显示到slidebar02里*/
+	var good = $.cookie('cars')? JSON.parse($.cookie('cars')) : {};//得到cookie里面的数据，如果没有，设为空对象
+	var goodid;
+	var goodnum = 0;
+	//console.log(good)
+	for(var goodid in good){
+		goodnum += Number(good[goodid].num);
+		console.log(good[goodid].num);
+	}
+	$('.slidebar02-car-num').html(goodnum);
+	
 	//飞入购物车效果
-        var offset = $(".mysearch").offset();//end 为在结束元素加一个ID ，将结束元素设置为fixed；
+        var offset = $(".slidebar02").offset();//end 为在结束元素加一个ID ，将结束元素设置为fixed；
         var addcar = $(this); 
         var img = addcar.parent().parent().parent().find('.small-img-box').find('img').eq(0).attr('src'); //定义图片地址
         console.log(img)
@@ -159,3 +171,14 @@ $('.good-car-add').click(function(){
             } 
         });
 })
+
+/*得到购物车里所有数量,显示到slidebar02里*/
+var good = $.cookie('cars')? JSON.parse($.cookie('cars')) : {};//得到cookie里面的数据，如果没有，设为空对象
+var goodid;
+var goodnum = 0;
+//console.log(good)
+for(var goodid in good){
+	goodnum += Number(good[goodid].num);
+	console.log(good[goodid].num);
+}
+$('.slidebar02-car-num').html(goodnum);

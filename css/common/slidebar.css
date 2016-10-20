@@ -1,0 +1,220 @@
+#slidebar{
+	width: 39px;
+	/*overflow: hidden;*/
+	position: fixed;
+	right: 0px;
+	background-color: rgb(245,245,245);
+	z-index: 99;
+}
+.slidebar01{
+	width: 39px;
+	height: 197px;
+	top: 0px;
+	position: relative;
+}
+.slidebar01 .slidebar01-div{
+	position: absolute;
+	bottom: 0px;
+	width: 39px;
+	height: 39px;
+}
+.slidebar01 .slidebar01-div:hover{
+	background-color: #FF7700;
+}
+.slidebar01 a{
+	position: absolute;
+	bottom: 9px;
+	left: 9px;
+	display: inline-block;
+	width: 22px;
+	height: 22px;
+	background: url(../../img/index/righticon.png) no-repeat -0px -0px;
+}
+.slidebar01:hover a{
+	background: url(../../img/index/righticon.png) no-repeat -22px -0px;
+}
+/**/
+.slidebar02{
+	cursor: pointer;
+	height: 150px;
+	width: 39px;
+	top: 36px;
+	position: relative;
+}
+.slidebar02:hover{
+	background-color: #FF7700;
+}
+.slidebar02:hover .slidebar02-span03{
+	color: #FFFFFF;
+}
+.slidebar02:hover .slidebar02-span02{
+	color: #FFFFFF;
+}
+.slidebar02:hover .slidebar02-span01 i{
+	background:url(../../img/index/righticon.png) no-repeat -22px -25px;
+}
+.slidebar02 span{
+	position: absolute;
+	width: 39px;
+	display: block;
+}
+.slidebar02-span01{
+	height: 30px;
+	top: 0px;
+}
+.slidebar02-span01 i{
+	position: absolute;
+	display: block;
+	width: 22px;
+	height: 22px;
+	bottom: 0px;
+	left: 8px;
+	background:url(../../img/index/righticon.png) no-repeat -0px -25px;
+}
+.slidebar02 .slidebar02-span02{
+	top: 40px;
+	width: 22px;
+	height: 56px;
+	margin:  auto 13px;
+	color: #AAAAAA;
+}
+.slidebar02 .slidebar02-span03{
+	top: 93px;
+	width: 22px;
+	height: 22px;
+	margin: auto 12px;
+	color: #FF7700;
+}
+.slidebar02 .slidebar02-span03 i{
+	font-style: normal;
+}
+.slidebar02 div{
+	position: absolute;
+	margin: auto 8px;
+	width: 25px;
+	height: 1px;
+	background-color: #BBBBBB;
+}
+.slidebar02 div.slidebar02-top{
+	top: 0px;
+}
+.slidebar02 div.slidebar02-bottom{
+	top: 123px;
+}
+.slidebar02:hover .slidebar02-top,.slidebar02:hover .slidebar02-bottom{background-color: #FF7700;}
+
+.slidebar03{
+	width: 39px;
+	height: 139px;
+	top: 0px;
+	
+	position: relative;
+	cursor: pointer;
+}
+.slidebar03-div{
+	width: 39px;
+	height: 39px;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	
+}
+.slidebar03 i{
+	position: absolute;
+	display: block;
+	margin: 7px 9px;
+	width: 22px;
+	height: 22px;
+	background: url(../../img/index/righticon.png) no-repeat -0px -50px;
+}
+.slidebar03-div:hover{
+	background-color: #FF7700;
+}
+.slidebar03-div:hover i{
+	background: url(../../img/index/righticon.png) no-repeat -22px -50px
+}
+
+.slidebar04{
+	position: relative;
+	top: 0px;
+	width: 39px;
+	height: 100px;
+}
+.slidebar04-div{
+	cursor: pointer;
+	position: absolute;
+	width: 39px;
+	height: 39px;
+	bottom: 0px;
+}
+.slidebar04-div i{
+	display: block;
+	width: 22px;
+	height: 22px;
+	margin: 8px 8px;
+	background: url(../../img/index/righticon.png) no-repeat -0px -75px;
+}
+.slidebar04-div:hover{
+	background-color: #ff7700;
+}
+.slidebar04-div:hover i{
+	background: url(../../img/index/righticon.png) no-repeat -22px -75px;
+}
+.slidebar05{
+	height: 120px;
+	width: 39px;
+	position: relative;
+}
+.slidebar05-div{
+	position: absolute;
+	width: 39px;
+	height: 80px;
+	bottom: 0px;
+	background-color: #FF7700;
+	cursor: pointer;
+}
+.slidebar05-div01{
+	height: 40px;
+	width: 39px;
+}
+.slidebar05-div01 i{
+	display: block;
+	width: 22px;
+	height: 22px;
+	margin: 7px 7px;
+	background: url(../../img/index/righticon.png) no-repeat -22px -100px;
+}
+.slidebar05-div02{
+	position: absolute;
+	width: 35px;
+	height: 40px;
+	color: #FFFFFF;
+	margin: 0px 7px;
+	bottom: 2px;
+}
+.slidebar06{
+	height: 185px;
+	width: 39px;
+	position: relative;
+}
+.slidebar06-div{
+	width: 39px;
+	height: 39px;
+	position: absolute;
+	top:90px;
+}
+.slidebar06-div a{
+	position: absolute;
+	
+	display: block;
+	width: 22px;
+	height: 22px;
+	margin: 7px 7px;
+	background: url(../../img/index/righticon.png) no-repeat -0px -130px;
+}
+.slidebar06-div:hover{
+	background-color: #FF7700;
+}
+.slidebar06-div:hover a{
+	background: url(../../img/index/righticon.png) no-repeat -22px -130px;
+}

@@ -115,5 +115,9 @@ $('.shopcar-clear').click(function(){
 	$('.shopcar-all-t').html('00');//结算价格总和清零
 })
 
+/**/
+$('.shopcar-top-left').click(function(){
+	location.href = 'index.html';
+})
 
 

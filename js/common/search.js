@@ -37,3 +37,38 @@ $.get(
 		$(".search_click").css("background",data[1].background);
 	}
 )
+
+$('.search_right').click(function(){
+	location.href = 'index.html'
+})
+
+/*百度搜索API*/
+var search = $("#searchInput")
+search.keyup(function(){
+	$.ajax({
+	url:"https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd="+search.val()+"&json=1&p=3",
+	dataType:"jsonp",
+	jsonp:"cb",
+	success:function(data){
+		var aData = data.s;
+		console.log(aData)
+		var oUl = $(".tiplist");
+		
+		oUl.html("");
+		for(var i in aData){
+			var aLi = $("<li></li>")
+			aLi.html(aData[i])
+			oUl.append(aLi)
+		}
+	}
+})
+})
+search.blur(function(){
+	$(".tiplist").css('display','none');
+})
+search.focus(function(){
+	$(".tiplist").css('display','block');
+})
+search.click(function(){
+	$(".tiplist").css('display','block');
+})

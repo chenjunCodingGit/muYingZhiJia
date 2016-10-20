@@ -26,6 +26,29 @@ $.get("../data/index/footer01/footer01.json",function(data){
 	
 })
 
+/*楼梯*/
+var isClick = false;//不会逐层高亮
+$("#louti ul li").click(function(){
+	isClick = true;//正在点击楼梯时，不遍历滚动时里面的代码
+	$(this).find("span").addClass("louti-active").parent().siblings().find("span").removeClass("louti-active");
+	var iTop = $(".louti").eq($(this).index()).offset().top;//得到实时的高度
+	$("html,body").stop().animate({scrollTop:iTop},1000)//运动前stop()
+})
+//滚动同时高亮楼梯层
+$(window).scroll(function(){
+	var aTop = $(this).scrollTop()
+	if(!isClick){//没有点击楼梯时执行
+		$(".louti").each(function(){//遍历每一个楼梯,相当于for循环
+		//this指向当前楼梯,使上一个楼梯出现1/2时高亮下一个楼梯
+		//索引时选择固定楼梯，随意加其他楼梯
+		//判断滚动条大于当前索引高度   -$(this).prev().outerHeight()/2
+		if(aTop>=$(this).offset().top){
+		$("#louti ul li").eq($(this).index(".louti")).find("span").addClass("louti-active").parent().siblings().find("span").removeClass("louti-active")
+	}
+	})
+	}
+})
+
 /*轮播图*/
 $('.prev').stop().animate({opacity:0});//按钮消失
 $('.next').stop().animate({opacity:0});//按钮消失
@@ -113,3 +136,46 @@ function tab(){
 	$('.box').stop().animate({left:-$('.box li').eq(0).outerWidth()*isNow});
 }
 
+
+/*吸顶百度搜索API*/
+var search = $("#xidingSearch")
+search.keyup(function(){
+	$.ajax({
+	url:"https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd="+search.val()+"&json=1&p=3",
+	dataType:"jsonp",
+	jsonp:"cb",
+	success:function(data){
+		var aData = data.s;
+		console.log(aData)
+		var oUl = $(".tiplist");
+		
+		oUl.html("");
+		for(var i in aData){
+			var aLi = $("<li></li>")
+			aLi.html(aData[i])
+			oUl.append(aLi)
+		}
+	}
+})
+})
+search.blur(function(){
+	$(".tiplist").css('display','none');
+})
+search.focus(function(){
+	$(".tiplist").css('display','block');
+})
+search.click(function(){
+	$(".tiplist").css('display','block');
+})
+
+/*吸顶效果*/
+
+$(window).scroll(function(){
+	var iTop = $(window).scrollTop();
+	if(iTop>=400){
+		$('#xiding-top').fadeIn(1000);
+		$('#xiding-top').css({position:'fixed',top:0})
+	}else{
+		$('#xiding-top').fadeOut(1000);
+	}
+})

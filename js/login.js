@@ -5,6 +5,11 @@ $.get("../data/login/login-blank.json",function(data){
 	//console.log(data[0])
 })
 
+/*点击跳转到主页*/
+$('.nav-blank').click(function(){
+	location.href = 'index.html';
+})
+
 /*登录验证*/
 //验证登录名是否合法
 $('#userName').on('keyup blur',function(evt){

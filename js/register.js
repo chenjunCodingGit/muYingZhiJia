@@ -5,6 +5,11 @@ $.get("../data/register/login-blank.json",function(data){
 	//console.log(data[0])
 })
 
+/*点击跳转到主页*/
+$('.nav-blank').click(function(){
+	location.href = 'index.html';
+})
+
 /*注册表单验证*/
 //验证正则
 var regs = {

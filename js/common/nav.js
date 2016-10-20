@@ -60,7 +60,7 @@ $.get("../data/common/nav/nav-third.json",function(data){
 								$('.nav02-ui0'+a).parent().find('.ui-nav03-ui0'+a).find('.nav03').eq(c-1).append(aCont);
 								//console.log(data[i][j][k])
 								//第一个a标签加属性
-								$('.nav03').eq(c-1).children().eq(1).attr({class:"nav03-one",href:"goodList.html",target:"_blank"});
+								$('.nav03').eq(c-1).children().eq(1).attr({class:"nav03-one",href:"/html/goodList.html",target:"_blank"});
 							}
 						}
 					}
