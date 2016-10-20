@@ -138,13 +138,12 @@
 	margin-left: 16px;
 	margin-top: 5px;
 }
-.list-hot-one dd p2,.list-hot-one dd p3{
+.list-hot-one dd .goodlist-myp2,.list-hot-one dd .goodlist-myp3{
 	width: 80px;
 	display: block;
 }
-.list-hot-one dd p3{
-	margin-top: 10px;
-	color: #FF0000;
+.goodlist-myp3{
+	color: #f00;
 	font-weight: bold;
 }
 
@@ -306,6 +305,9 @@
 	width: 161px;
 	height: 292px;
 	margin: 0 auto;
+}
+.goodlist-one img{
+	cursor: pointer;
 }
 .goodlist-one dl{
 	width: 160px;

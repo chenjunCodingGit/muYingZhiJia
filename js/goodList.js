@@ -22,13 +22,27 @@ $('.list-click-tab').each(function(){
 	})
 })
 
+/*动态加载图片*/
+$.get('../data/goodList/goodlist.json',function(data){
+	var j = 0;
+	for(var i in data){
+		$('.goodlist-one').eq(j)[0].id = data[i].id;
+		$('.goodlist-one').eq(j).find('img').attr({src:data[i].img});
+		$('.goodlist-one').eq(j).find('.goodlist-myp2').html(data[i].name);
+		$('.goodlist-one').eq(j).find('.goodlist-myp3').html(data[i].tip);
+		$('.goodlist-one').eq(j).find('.goodlist-myp4').find('i').html(data[i].price);
+		console.log(data[i].tip)
+		j++;
+	}
+})
+
 /*点击添加到购物车*/
-$('.goodlist-one').click(function(){
-	var goodId = $(this)[0].id;
+$('.add-shop-car').click(function(){
+	var goodId = $(this).parent().parent().parent()[0].id;
 	var goods = $.cookie('cars')? JSON.parse($.cookie('cars')) : {};
-	var goodName = $(this).find('p2').html();
-	var goodPrice = $(this).find('p4').find('i').html();
-	var goodSrc = $(this).find('img').attr('src');
+	var goodName = $(this).parent().parent().find('.goodlist-myp2').html();
+	var goodPrice = $(this).parent().parent().find('.goodlist-myp4').find('i').html();
+	var goodSrc = $(this).parent().parent().find('img').attr('src');
 	if(goodId in goods){
 		goods[goodId].num++;
 	}else{
@@ -41,4 +55,38 @@ $('.goodlist-one').click(function(){
 		}
 	}
 	$.cookie('cars',JSON.stringify(goods),{expires:7,path:"/"});
+	
+	
+	//飞入购物车效果
+    var offset = $(".mysearch").offset();//end 为在结束元素加一个ID ，将结束元素设置为fixed；
+    var addcar = $(this); 
+    var img = addcar.parent().parent().find('img').eq(0).attr('src'); //定义图片地址
+    console.log(img)
+    //将图片地址赋值给飞入效果的图片
+    var flyer = $('<img class="u-flyer" style="width:100px;height:100px;z-index:1000000;border-radius:50px" src="'+img+'">'); 
+    flyer.fly({ 
+        start: { 
+            left: event.pageX, //开始位置（必填）#fly元素会被设置成position: fixed 
+            top: event.pageY-$(document).scrollTop() //开始位置（必填） 可视窗口的距离
+        }, 
+        end: { 
+            left: offset.left+100, //结束位置（必填） 
+            top: offset.top-$(document).scrollTop()+10, //结束位置（必填） 
+            width: 0, //结束时宽度 
+            height: 0 //结束时高度 
+        }, 
+        onEnd: function(){ //结束回调 
+        	//contCarNum();//数量++回调函数  自己注释掉
+//              $("#msg").show().animate({width: '250px'}, 200).fadeOut(1000); //提示信息                
+//              addcar.css("cursor","default").removeClass('orange').unbind('click'); 
+            this.destory(); //移除dom 
+        } 
+    });
+})
+
+/*点击图片跳转*/
+$('.goodlist-one img').click(function(){
+	location.href = 'goodDetail.html';
+	var imgId = $(this).parent().parent().parent()[0].id;
+	$.cookie('carId',JSON.stringify(imgId),{expires:7,path:"/"});
 })

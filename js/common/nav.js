@@ -49,11 +49,8 @@ $.get("../data/common/nav/nav-third.json",function(data){
 					for(var k in data[i][j]){
 						if(k == "title0"+b){
 							//加载三级导航中的小标题,如：孕妇内衣
-							//console.log(a+"a"+b)
-							var aSpan = $('<span></span>').html(data[i]["box0"+b]["title0"+b]);
-							//console.log(data[i]["box0"+b]["title0"+b])
-							//console.log(data[i]["box01"]["title01"]);
-							$('.nav02-ui0'+a).parent().find('.ui-nav03-ui0'+a).find('.nav03').eq(b-1).prepend(aSpan);
+							//var aSpan = $('<span></span>').html(data[i]["box0"+b]["title0"+b]);
+							//$('.nav02-ui0'+a).parent().find('.ui-nav03-ui0'+a).find('.nav03').eq(b-1).prepend(aSpan);
 						}
 						//加载三级导航小标签
 						if(k == "text0"+c){

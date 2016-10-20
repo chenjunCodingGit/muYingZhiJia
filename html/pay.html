@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>母婴之家-[支付]</title>
+		<link rel="shortcut icon" href="http://static.boodoll.cn/mall/v16/images/myzj.ico">
 		<link rel="stylesheet" href="../css/common/common.css" />
 		<link rel="stylesheet" href="../css/common/font-awesome.min.css" />
 		<link rel="stylesheet" href="../css/common/header.css" /> 
@@ -10,6 +11,7 @@
 		<link rel="stylesheet" href="../css/common/footer-bottom.css" />
 		
 		<link rel="stylesheet" href="../css/pay.css" />
+		<script type="text/javascript" src="../lib/region_select.js" ></script><!--引入三级联动插件-->
 	</head>
 	<body>
 		<!--公用HTML-->
@@ -34,18 +36,15 @@
 					</li>
 					<li class="pay-address-zone">
 						<label for="pay-address-zone"><span>*</span>所在地区：</label>
-						<select name="请选择">
-							
-						</select>
-						<select name="请选择">
-							
-						</select>
-						<select name="请选择">
-							
-						</select>
+						<select name="sc-p" id="sc-p" class="t4-input"></select>
+						<select name="sc-c" id="sc-c" class="t4-input t5-input"></select>
+						<select name="sc-a" id="sc-a"class="t4-input"></select>
+						<script>
+							new PCAS("sc-p","sc-c","sc-a","请选择",'请选择','请选择');
+						</script>
 					</li>
 					<li class="pay-address-detail">
-						<label for="pay-address-detail"><span>*</span>详细地址</label>
+						<label for="pay-address-detail"><span>*</span>详细地址：</label>
 						<input type="text" id="pay-address-detail" />
 					</li>
 					<li class="pay-phone">
@@ -122,6 +121,7 @@
 		
 	<script type="text/javascript" src="../lib/jquery-1.12.3.js" ></script>
 	<script type="text/javascript" src="../js/common/common.js" ></script>
+	
 	<script>
 		loadHtml("../html/common/header.html","myheader");
 		loadHtml("../html/common/footer.html","footer");

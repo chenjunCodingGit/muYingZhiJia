@@ -21,6 +21,8 @@ $(".good-all-evaluate ul a").click(function(){
 	$('.good-all-evaluate ul a span').css('fontWeight','normal')
 })
 
+
+
 /*放大镜*/
 var oSmallImg = $(".small-img-box").find('img');
 //点击每个小图遍历
@@ -80,7 +82,7 @@ oMiddleImgBox.mouseout(function(){
 
 /*加入购物车信息*/
 //点击数量加减
-var goodNum = $('.good-car-num').html();
+var goodNum = Number($('.good-car-num').html());
 $('.good-detail-add').click(function(){
 	goodNum++;
 	$('.good-car-num').html(goodNum);
@@ -93,16 +95,33 @@ $('.good-detail-sub').click(function(){
 		goodNum = 0;
 	}
 })
+
+/*获取商品列表页传过来的id*/
+var listId = $.cookie('carId')? JSON.parse($.cookie('carId')) : {};
+$.get('../data/goodList/goodlist.json',function(data){
+	for(i in data){
+		if(listId == Number(data[i].id)){
+			var img = data[i].img;
+			//console.log(src)
+			$('.middle-img-box').find('img').attr({src:img});
+			$('.small-img-box').find('img').eq(0).attr({src:img});
+		}
+	}
+})
+
 //点击加入购物车
 $('.good-car-add').click(function(){
-	
-	var goodId = $(this)[0].id;
+	$('.good-car-num').text('1');
+	goodNum = Number($('.good-car-num').html());
+	var goodId = listId;
+	//var goodId = $(this)[0].id;
 	var goods = $.cookie('cars')? JSON.parse($.cookie('cars')) : {};
 	var goodName = $(this).attr('name');
 	var goodPrice = $('.good-detail-off').find('i').html();
 	var goodSrc = $('.goodcar-detail-img').attr('src');
 	if(goodId in goods){
-		goods[goodId].num += goodNum;
+		goods[goodId].num = goodNum + goods[goodId].num;
+		console.log(typeof(goods[goodId].num))
 	}else{
 		goods[goodId] = {
 			id:goodId,
@@ -113,5 +132,30 @@ $('.good-car-add').click(function(){
 		}
 	}
 	$.cookie('cars',JSON.stringify(goods),{expires:7,path:"/"});
-	$('.good-car-num').html('1');
+	
+	//飞入购物车效果
+        var offset = $(".mysearch").offset();//end 为在结束元素加一个ID ，将结束元素设置为fixed；
+        var addcar = $(this); 
+        var img = addcar.parent().parent().parent().find('.small-img-box').find('img').eq(0).attr('src'); //定义图片地址
+        console.log(img)
+        //将图片地址赋值给飞入效果的图片
+        var flyer = $('<img class="u-flyer" style="width:100px;height:100px;z-index:1000000;border-radius:50px" src="'+img+'">'); 
+        flyer.fly({ 
+            start: { 
+                left: event.pageX, //开始位置（必填）#fly元素会被设置成position: fixed 
+                top: event.pageY-$(document).scrollTop() //开始位置（必填） 可视窗口的距离
+            }, 
+            end: { 
+                left: offset.left+100, //结束位置（必填） 
+                top: offset.top-$(document).scrollTop()+10, //结束位置（必填） 
+                width: 0, //结束时宽度 
+                height: 0 //结束时高度 
+            }, 
+            onEnd: function(){ //结束回调 
+            	//contCarNum();//数量++回调函数  自己注释掉
+//              $("#msg").show().animate({width: '250px'}, 200).fadeOut(1000); //提示信息                
+//              addcar.css("cursor","default").removeClass('orange').unbind('click'); 
+                this.destory(); //移除dom 
+            } 
+        });
 })

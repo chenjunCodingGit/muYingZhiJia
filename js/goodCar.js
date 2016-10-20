@@ -35,6 +35,8 @@ $('.shopcar-all-t').html(allP);//总价页面显示
 //点击减号数量减减
 $('.shopcar-one-sub').click(function(){
 	var all = 0;//除了点击其他的总价
+	var goodsNum = 0;//商品数量总数
+	var conNum = Number($(this).parent().find('.shopcar-one-num').html());
 	var aPrice = $(this).parent().find('.shopcar-one-price').find('em').text();//点击当前商品的价格
 	var aNum = $(this).parent().find('.shopcar-one-num').html();//点击当前商品的数量
 	aNum--;
@@ -45,26 +47,29 @@ $('.shopcar-one-sub').click(function(){
 		for(var i=0;i<$(this).parent().siblings().length;i++){
 			//计算其他商品总价
 			all += Number($(this).parent().siblings().find('.shopcar-all-prices').eq(i).text());
+			goodsNum += Number($(this).parent().siblings().find('.shopcar-one-num').eq(i).text());
 		}
+		//得到所有的价格总和
 		var allPrice = aNum*Number(aPrice)+all;
-		$('.shopcar-total-pirce').html(allPrice);
-		$('.shopcar-all-t').html(allPrice);
+		$('.shopcar-total-pirce').html(allPrice);//总和显示到页面
+		$('.shopcar-all-t').html(allPrice);//总和显示到页面
+		$('.shopcar-total-nums').html(goodsNum+conNum-1);
 	}else{
 		aNum = 0;
 	}
+	//得到该商品的id
 	var agoodId = $(this).parent().attr('data-id');
-	//for(agoodId in good){	
-	//}
-	good[agoodId].num = aNum;
-	$.cookie('cars',JSON.stringify(good),{expires:7,path:"/"});
+	good[agoodId].num = aNum;//将cookie中该商品的id值改变
+	$.cookie('cars',JSON.stringify(good),{expires:7,path:"/"});//将改变的值存入cookie
 })
 //点击加号数量加加
 $('.shopcar-one-add').click(function(){
 	var all = 0;
 	var aPrice = $(this).parent().find('.shopcar-one-price').find('em').text();
 	var aNum = $(this).parent().find('.shopcar-one-num').html();
-	
-	
+	var goodsNum = 0;//商品数量总数
+	var conNum = Number($(this).parent().find('.shopcar-one-num').html());
+
 	aNum++;
 	$(this).parent().find('.shopcar-one-num').html(aNum);
 	$(this).parent().find('.shopcar-one-prices').find('i').html(aNum*Number(aPrice));
@@ -72,19 +77,23 @@ $('.shopcar-one-add').click(function(){
 	
 	for(var i=0;i<$(this).parent().siblings().length;i++){
 		all += Number($(this).parent().siblings().find('.shopcar-all-prices').eq(i).text());
+		goodsNum += Number($(this).parent().siblings().find('.shopcar-one-num').eq(i).text());
 	}
 	var allPrice = aNum*Number(aPrice)+all;
 	$('.shopcar-total-pirce').html(allPrice);
 	$('.shopcar-all-t').html(allPrice);
+	$('.shopcar-total-nums').html(goodsNum+conNum+1);
 	
 	var agoodId = $(this).parent().attr('data-id');
-	//for(agoodId in good){
-		good[agoodId].num = aNum;;
-	//}
+	good[agoodId].num = aNum;
 	$.cookie('cars',JSON.stringify(good),{expires:7,path:"/"});
 })
-
-
+/*进入网页时，所有物品数量和*/
+var allGoodsNum = 0;
+for(goodId in good){
+	 allGoodsNum += good[goodId].num;
+}
+$('.shopcar-total-nums').html(allGoodsNum);
 
 /*点击删除从商品详情页来的商品*/
 $('.shopcar-one-del').click(function(){
@@ -100,10 +109,10 @@ $('.shopcar-one-del').click(function(){
 })
 /*清空购物车所有东西*/
 $('.shopcar-clear').click(function(){
-	$('.shopcar-one').remove();
-	$.cookie('cars',JSON.stringify(good),{expires:-1,path:"/"});
-	$('.shopcar-total-pirce').html('00');
-	$('.shopcar-all-t').html('00');
+	$('.shopcar-one').remove();//清空页面上的商品
+	$.cookie('cars',JSON.stringify(good),{expires:-1,path:"/"});//删除全部商品的cookie
+	$('.shopcar-total-pirce').html('00');//结算价格总和清零
+	$('.shopcar-all-t').html('00');//结算价格总和清零
 })
 
 

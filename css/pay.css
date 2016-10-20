@@ -70,8 +70,11 @@
 .pay-address-zone select{
 	width: 70px;
 }
+.pay-address-zone select.t4-input{
+	width: 120px;
+}
 .pay-address-detail{
-	left: 39px;
+	left: 26px;
 	top: 100px;
 }
 .pay-address-detail input{

@@ -1,0 +1,114 @@
+{
+	"1": {
+		"id": 1,
+		"img": "../img/goodList/list01.jpg",
+		"name":"澳洲直邮：Bellamys贝拉米2段婴幼儿有机牛奶粉900g",
+		"tip":"同款商品第2件",
+		"price": 29
+	},
+	"2": {
+		"id": 2,
+		"img": "../img/goodList/detail02.jpg",
+		"name":"澳洲直邮：Gamophen药皂100g 机牛奶粉900g",
+		"tip":"同款商品第2件",
+		"price": 39
+	},
+	"3": {
+		"id": 3,
+		"img": "../img/goodList/detail03.jpg",
+		"name":"澳洲直邮：Gamophen药皂100g ",
+		"tip":"同款商品第2件",
+		"price": 49
+	},
+	"4": {
+		"id": 4,
+		"img": "../img/goodList/detail04.jpg",
+		"name":"澳洲直邮：Gamophen药皂100g ",
+		"tip":"同款商品第2件",
+		"price": 59
+	},
+	"5": {
+		"id": 5,
+		"img": "../img/goodList/detail05.jpg",
+		"name":"澳洲直邮：Bellamys贝拉有机牛奶粉900g",
+		"tip":"同款商品第2件",
+		"price": 69
+	},
+	"6": {
+		"id": 6,
+		"img": "../img/goodList/detail06.jpg",
+		"name":"澳洲：Bellamys贝拉米幼儿有机牛奶粉900g",
+		"tip":"同款商品第2件",
+		"price": 79
+	},
+	"7": {
+		"id": 7,
+		"img": "../img/goodList/detail07.jpg",
+		"name":"澳洲直邮：Bellamys贝拉婴幼儿有机牛奶粉900g",
+		"tip":"同款商品第2件",
+		"price": 89
+	},
+	"8": {
+		"id": 8,
+		"img": "../img/goodList/detail08.jpg",
+		"name":"澳：Bell拉米2段婴幼儿有机牛奶粉900g",
+		"tip":"同款商品第2件",
+		"price": 99
+	},
+	"9": {
+		"id": 9,
+		"img": "../img/goodList/detail09.jpg",
+		"name":"澳洲直邮：Be贝拉米2段婴幼儿有机牛奶粉900g",
+		"tip":"同款商品第2件",
+		"price": 657
+	},
+	"10": {
+		"id": 10,
+		"img": "../img/goodList/detail10.jpg",
+		"name":"澳洲直邮：Bys贝拉米2段婴幼儿有机牛奶粉900g",
+		"tip":"同款商品第2件",
+		"price": 323
+	},
+	"11": {
+		"id": 11,
+		"img": "../img/goodList/detail11.jpg",
+		"name":"澳洲直邮：Bellamys贝拉米2段机牛奶粉900g",
+		"tip":"同款商品第2件",
+		"price": 345
+	},
+	"12": {
+		"id": 12,
+		"img": "../img/goodList/detail12.jpg",
+		"name":"澳洲：Bellamys贝拉米2段婴幼儿有机牛奶粉900g",
+		"tip":"同款商品第2件",
+		"price": 85
+	},
+	"13": {
+		"id": 13,
+		"img": "../img/goodList/detail13.jpg",
+		"name":"Bellamys贝拉米2段婴幼儿有机牛奶粉900g",
+		"tip":"同款商品第2件",
+		"price": 23
+	},
+	"14": {
+		"id": 14,
+		"img": "../img/goodList/detail14.jpg",
+		"name":"Bellamys贝拉米2段婴幼儿有机牛奶粉900g",
+		"tip":"同款商品第2件",
+		"price": 45
+	},
+	"15": {
+		"id": 15,
+		"img": "../img/goodList/detail15.jpg",
+		"name":"澳洲直邮：Bellamys贝拉米机牛奶粉900g",
+		"tip":"同款商品第2件",
+		"price": 40
+	},
+	"16": {
+		"id": 16,
+		"img": "../img/goodList/detail16.jpg",
+		"name":"澳洲直邮：Bellamys贝拉米2段婴幼儿有机牛奶粉900g",
+		"tip":"同款商品第2件",
+		"price": 50
+	}
+}
