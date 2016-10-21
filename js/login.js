@@ -68,19 +68,26 @@ $('#btn').click(function(){
 	}
 })
 
+var isLogin = 1;
+var m = 1;
 $('#btn').click(function(){
 	if(checkName()&&checkPwd03()&&mobile){//输入是否合法
 		$('#auth-code-i').removeClass('login-error-i').removeClass('login-mobile-error').html('');	
-		var loginName = JSON.parse($.cookie('user')).userName;//得到cookie中的name
-		var loginPwd = JSON.parse($.cookie('user')).userPwd;//得到cookie中的password
-		console.log(loginName+" "+loginPwd)
-		if($('#userName').val()==loginName && $('#pwd').val()==loginPwd){//成功登录
-			//清除密码账户错误的提示
-			$('#auth-code-i').removeClass('login-error-i').removeClass('login-mobile-error').html('');	
-			//跳转到首页
-			location.href = 'index.html';
-		}else{
-			//显示登录失败
+		var userInfo = JSON.parse($.cookie('user'));
+		for(var i in userInfo){
+			if(userInfo[i].userName==$('#userName').val() && userInfo[i].userPwd == $('#pwd').val()){
+				console.log('ok')
+				isLogin = 0;
+				var iInfo = {};
+				iInfo.a = m;
+				iInfo.name = $('#userName').val();
+				$.cookie("loginOk",JSON.stringify(iInfo),{expires:7,path:"/"});
+				$('#auth-code-i').removeClass('login-error-i').removeClass('login-mobile-error').html('');	
+				//跳转到首页
+				location.href = 'index.html';
+			}
+		}
+		if(isLogin == 1){
 			$('#auth-code-i').addClass('login-error-i').addClass('login-mobile-error').html('密码或账户错误');
 		}
 	}

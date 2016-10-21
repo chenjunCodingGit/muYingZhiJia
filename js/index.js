@@ -179,3 +179,5 @@ $(window).scroll(function(){
 		$('#xiding-top').fadeOut(1000);
 	}
 })
+
+

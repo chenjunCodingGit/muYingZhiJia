@@ -182,6 +182,7 @@ $('#register-btn').click(function(){
 })
 
 //点击注册
+var isRegister = 1;
 $('#register-btn').click(function(){
 	if($('#registeryes')[0].checked){
 		//去除同意协议栏错误
@@ -191,13 +192,26 @@ $('#register-btn').click(function(){
 			//去除验证码错误提示
 			$('.register-last-i').removeClass('error').html('');
 			console.log('ok');
+			
 			//注册成功后将用户名 密码存入cookie
-			var userInfo = {};
-			userInfo.userName = $('#phone').val();
-			userInfo.userPwd = $('#registerPwd02').val();
-			//提交用户名 密码到cookie
-			$.cookie("user",JSON.stringify(userInfo),{expires:7,path:"/"});//path:"/" 存到跟路径，可以和login共享
-			location.href = '../html/login.html';
+			var userInfo = $.cookie('user')? JSON.parse($.cookie('user')) : {};
+			for(var i in userInfo){
+				if(userInfo[i].userName == $('#phone').val()){
+					isRegister = 0;
+					alert('用户名已存在');
+				}
+			}
+			if(isRegister==1){
+				var date = Date.parse(new Date());
+				userInfo[date] = {
+					userName:$('#phone').val(),
+					userPwd:$('#registerPwd02').val()
+				}
+				$.cookie("user",JSON.stringify(userInfo),{expires:7,path:"/"});//path:"/" 存到跟路径，可以和login共享
+				
+				location.href = '../html/login.html';
+			}
+			
 		}else{
 			$('.register-last-i').addClass('error').html('图片验证码格式错误');
 		}

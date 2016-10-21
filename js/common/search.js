@@ -43,32 +43,41 @@ $('.search_right').click(function(){
 })
 
 /*百度搜索API*/
-var search = $("#searchInput")
-search.keyup(function(){
+var searchkey = $("#searchMes");
+searchkey.keyup(function(){
 	$.ajax({
-	url:"https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd="+search.val()+"&json=1&p=3",
+	url:"https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd="+searchkey.val()+"&json=1&p=3",
 	dataType:"jsonp",
 	jsonp:"cb",
 	success:function(data){
 		var aData = data.s;
-		console.log(aData)
+		console.log(data)
 		var oUl = $(".tiplist");
 		
 		oUl.html("");
 		for(var i in aData){
-			var aLi = $("<li></li>")
-			aLi.html(aData[i])
-			oUl.append(aLi)
+			var aLi = $("<li class='searchLi'></li>");
+			aLi.html(aData[i]);
+			oUl.append(aLi);
+			
 		}
+		$('.searchLi').click(function(){
+			console.log($(this).html())
+			
+			$("#searchMes").val($(this).html());
+			$(".tiplist").css('display','none');
+			//$(".tiplist").css('display','none');
+		})
 	}
 })
 })
-search.blur(function(){
+/*$(window).click(function(){
 	$(".tiplist").css('display','none');
-})
-search.focus(function(){
+})*/
+searchkey.focus(function(){
 	$(".tiplist").css('display','block');
 })
-search.click(function(){
+searchkey.click(function(){
 	$(".tiplist").css('display','block');
 })
+

@@ -16,3 +16,13 @@ for(var i=0;i<b.length;i++){
 		b[this.index].className = "" 
 	}
 }
+
+/*验证登录正确*/
+var isLogin = $.cookie('loginOk')? JSON.parse($.cookie('loginOk')) : {};
+var userInfo = $.cookie('user')? JSON.parse($.cookie('user')) : {};
+if(isLogin.a==1){
+		
+		$('.headerName').html('欢迎 '+isLogin.name);
+		$('.headerLogin').html('已登录');
+		$('.headerReg').html('');
+}
